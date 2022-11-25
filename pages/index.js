@@ -50,60 +50,93 @@ export default function Home() {
               <div className={styles.profileBody}>
                 <div className={styles.profileBodySide}>
                   <div>This is a photo of you</div>
-                  <Link>View more photos of me</Link>
-                  <Link>Read Notes about Me</Link>
-                  <Link>Edit My Profile</Link>
-                  <Link>Edit My Picture</Link>
-                  <Link>Edit My Privacy</Link>
-                  <Link>Create a Profile Badge</Link>
-
-                  /* the 'status' pane goes here. not sure what it contains. can't scroll down enough/ */
-                  <div>
+                  <div className={styles.profileSideLinks}>
+                    <Link href="/photos">View more photos of me</Link>
+                    <Link href="/notes">Read Notes about Me</Link>
+                    <Link href="/profile">Edit My Profile</Link>
+                    <Link href="/pictures">Edit My Picture</Link>
+                    <Link href="/privacy">Edit My Privacy</Link>
+                    <Link href="/badge">Create a Profile Badge</Link>
                   </div>
                 </div>
                 <div className={styles.profileBodyMain}>
-              <details className={styles.miniFeed}>
-                <summary>Mini-feed</summary>
-                <div className={styles.detailContents}>
-                  content that is hidden
-                </div>
-              </details>
+                  <h1>Matt Callum Lastname</h1>
+                  <p>Facebook</p>
+                  <p>Iowa State Alum</p>
+                  <address>Silicon Valley, California</address>
 
-              <details className={styles.personalInfo}>
-                <summary>Personal Info <button>Edit</button></summary>
-                <div className={styles.detailContents}>
+                  <hr/>
+
                   <table>
                     <tr>
-                      <td>Political Views:</td>
-                      <td>Moderate</td>
-                    </tr>
-                    <tr>
-                      <td>Interests:</td>
-                      <td>Web Design, Photography, Almost All Music, Tennis, Nintendo DS Lite</td>
+                      <td>Email:</td>
+                      <td>username@facebook.com</td>
                     </tr>
 
                     <tr>
-                      <td>Favorite Music:</td>
-                      <td>100 Gecs, xaviersobased, bladee</td>
+                      <td>AIM Screenname:</td>
+                      <td>matthead</td>
                     </tr>
 
                     <tr>
-                      <td>Favorite TV Shows:</td>
-                      <td>The 100</td>
+                      <td>Mobile:</td>
+                      <td>911</td>
                     </tr>
 
                     <tr>
-                      <td>Favorite Movies:</td>
-                      <td>Tarantino</td>
+                      <td>Sex:</td>
+                      <td>Male</td>
                     </tr>
 
                     <tr>
-                      <td>Favorite Quotes:</td>
-                      <td>"Drama is life with the dull bits cut out." - Alfred Hitchock</td>
+                      <td>Interested In:</td>
+                      <td>Women</td>
                     </tr>
                   </table>
-                </div>
-              </details>
+
+
+                  <details className={styles.miniFeed}>
+                    <summary>Mini-feed</summary>
+                    <div className={styles.detailContents}>
+                      content that is hidden
+                    </div>
+                  </details>
+
+                  <details className={styles.personalInfo}>
+                    <summary>Personal Info <button>Edit</button></summary>
+                    <div className={styles.detailContents}>
+                      <table>
+                        <tr>
+                          <td>Political Views:</td>
+                          <td>Moderate</td>
+                        </tr>
+                        <tr>
+                          <td>Interests:</td>
+                          <td>Web Design, Photography, Almost All Music, Tennis, Nintendo DS Lite</td>
+                        </tr>
+
+                        <tr>
+                          <td>Favorite Music:</td>
+                          <td>100 Gecs, xaviersobased, bladee</td>
+                        </tr>
+
+                        <tr>
+                          <td>Favorite TV Shows:</td>
+                          <td>The 100</td>
+                        </tr>
+
+                        <tr>
+                          <td>Favorite Movies:</td>
+                          <td>Tarantino</td>
+                        </tr>
+
+                        <tr>
+                          <td>Favorite Quotes:</td>
+                          <td>"Drama is life with the dull bits cut out." - Alfred Hitchock</td>
+                        </tr>
+                      </table>
+                    </div>
+                  </details>
                 </div>
               </div>
             </main>

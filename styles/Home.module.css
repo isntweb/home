@@ -56,11 +56,18 @@
 
 .profileBodySide {
   width: 25%;
+  padding: 1rem;
+}
+
+.profileSideLinks {
+  display: flex;
+  flex-direction: column;
 }
 
 .profileBodyMain {
   width: 75%;
 }
+
 
 /* Cute vercel thing, for now */
 .footer {
