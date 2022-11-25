@@ -17,18 +17,18 @@ const Accordion = ({ title, children }) => {
 const InterestTable = ({ interests }) => {
   return (
     <table>
-    {interests.map(([name, body]) => {
-      return (
-        <tr>
-          <td>
-            {name}:
-          </td>
-          <td>
-            {body.map((component) => (<span>{component}</span>))}
-          </td>
-        </tr>
-      )
-    })}
+      {interests.map(([name, body]) => {
+        return (
+          <tr>
+            <td>
+              {name}:
+            </td>
+            <td>
+              {body.map((component) => (<span>{component}</span>))}
+            </td>
+          </tr>
+        )
+      })}
     </table>
   );
 }
@@ -49,6 +49,23 @@ const personal_interests = [
   ["Favorite Movies", ["Tarantino"]],
   ["Favorite Quotes", ["\"Drama is life with the dull bits cut out.\" - Alfred Hitchock"]],
 ];
+
+const TopMenu = () => {
+  return (
+    <div className={styles.menu}>
+      <div className={styles.fblogo}>facebook</div>
+      <div className={styles.menuLinks}>
+        <Link href="/home">home</Link>
+        <Link href="/search">search</Link>
+        <Link href="/browse">browse</Link>
+        <Link href="/share">share</Link>
+        <Link href="/invite">invite</Link>
+        <Link href="/help">help</Link>
+        <Link href="/logout">logout</Link>
+      </div>
+    </div>
+  );
+}
 
 export default function Home() {
   return (
@@ -74,19 +91,9 @@ export default function Home() {
               <Link href="/logout">My Privacy</Link>
             </div>
 
+
             <div className={styles.horizontalPane}>
-              <div className={styles.menu}>
-                <div className={styles.fblogo}>facebook</div>
-                <div className={styles.menuLinks}>
-                  <Link href="/home">home</Link>
-                  <Link href="/search">search</Link>
-                  <Link href="/browse">browse</Link>
-                  <Link href="/share">share</Link>
-                  <Link href="/invite">invite</Link>
-                  <Link href="/help">help</Link>
-                  <Link href="/logout">logout</Link>
-                </div>
-              </div>
+              <TopMenu />
 
               <main className={styles.main}>
                 <div className={styles.profileHeader}>
