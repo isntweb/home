@@ -1,17 +1,49 @@
+
+/* Everything on the site. */
 .container {
   padding: 0 2rem;
 }
 
-.main {
+.siteWindow {
   min-height: 100vh;
-  padding: 4rem 0;
+  padding: 6rem 2rem;
   flex: 1;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+  overflow: scroll;
 }
 
+/* Visual content of the facebook app. */
+.body {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border-radius: 10px;
+  background-color: white;
+}
+
+
+/* Facebook app content that changes between pages. */
+.main {
+  display: flex;
+  flex-direction: column;
+}
+
+.horizontalPane {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+/* sidebar of the site; global options */
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  width: 20%;
+}
+
+/* Cute vercel thing, for now */
 .footer {
   display: flex;
   flex: 1;
@@ -28,52 +60,37 @@
   flex-grow: 1;
 }
 
+.logo {
+  height: 1em;
+  margin-left: 0.5rem;
+}
+
+@media (prefers-color-scheme: dark) {
+  .footer {
+    border-color: #222;
+  }
+  .logo img {
+    filter: invert(1);
+  }
+}
+
+/* Menu on the top bar */
 .menu {
+  width: 100%;
   display: flex;
-  flex-direction: column;
-  background-color: var(--white);
-  color: var(--blue);
-}
-
-.description {
-  text-align: center;
-}
-
-.description {
-  margin: 4rem 0;
-  line-height: 1.5;
-  font-size: 1.5rem;
-}
-
-.code {
-  background: var(--white);
-  border-radius: 5px;
-  padding: 0.75rem;
-  font-size: 1.1rem;
-  font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
-    Bitstream Vera Sans Mono, Courier New, monospace;
-}
-
-.grid {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  max-width: 800px;
+  flex-direction: row;
+  color: var(--white);
+  background-color: var(--blue);
 }
 
 .fblogo {
   width: 50%;
 }
 
-.logo {
-  height: 1em;
-  margin-left: 0.5rem;
-}
-
 .menuLinks {
   display: flex;
   flex-direction: row;
+  justify-content: space-around;
 }
 
 @media (max-width: 600px) {
@@ -83,14 +100,15 @@
   }
 }
 
-@media (prefers-color-scheme: dark) {
-  .footer {
-    border-color: #222;
-  }
-  .code {
-    background: #111;
-  }
-  .logo img {
-    filter: invert(1);
-  }
+.miniFeed {
+  width: 100%;
+
+}
+
+.miniFeed > summary {
+  justify-content: space-between;
+}
+
+.personalInfo {
+  width: 100%;
 }
