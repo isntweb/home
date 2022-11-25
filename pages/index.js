@@ -19,25 +19,16 @@ const Accordion = ({ title, edit, children }) => {
 
 const InterestTable = ({ interests }) => {
   return (
-    <table>
-      {interests.map(([name, body]) => {
-        return (
+    <table className={styles.interestTable}>
+      {interests.map(([name, body]) => (
           <tr>
-            <td>
-              {name}:
-            </td>
-            <td>
-              {body.map((component) => (<span>{component}</span>))}
-            </td>
+            <td> {name}: </td>
+            <td> {body.map((component) => (<span>{component}</span>))} </td>
           </tr>
         )
-      })}
+      )}
     </table>
   );
-}
-
-const LinkMenu = () => {
-
 }
 
 const profile_interests = [
