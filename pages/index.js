@@ -1,16 +1,19 @@
 import Head from 'next/head'
 import Image from 'next/image'
+import mattPic from '../public/matt.png'
 import Link from 'next/link'
 import styles from '../styles/Home.module.css'
 
 const Accordion = ({ title, edit, children }) => {
   return (
-    <details className={styles.accordion}>
-      <summary><span>{title}</span> {edit && <button>Edit</button>}</summary>
-      <div className={styles.detailContents}>
-        {children}
-      </div>
-    </details>
+    <div className={styles.accordionWrapper}>
+      <details className={styles.accordion}>
+        <summary><span>{title}</span> {edit && <button>Edit</button>}</summary>
+        <div className={styles.detailContents}>
+          {children}
+        </div>
+      </details>
+    </div>
   )
 }
 
@@ -31,6 +34,10 @@ const InterestTable = ({ interests }) => {
       })}
     </table>
   );
+}
+
+const LinkMenu = () => {
+
 }
 
 const profile_interests = [
@@ -78,17 +85,22 @@ export default function Home() {
       <div className={styles.siteWindowContainer}>
         <div className={styles.siteWindow}>
           <div className={styles.body}>
-            <div className={styles.sidebar}>
-              <input/>
-              <Link href="/home">My Profile</Link>
-              <Link href="/search">My Friends</Link>
-              <Link href="/browse">My Photos</Link>
-              <Link href="/share">My Notes</Link>
-              <Link href="/invite">My Groups</Link>
-              <Link href="/help">My Events</Link>
-              <Link href="/logout">My Messages</Link>
-              <Link href="/logout">My Account</Link>
-              <Link href="/logout">My Privacy</Link>
+            <div className={styles.sideColumn}>
+              <div className={styles.cornerLogo}> tja </div>
+              <div className={styles.sidebar}>
+                <input/>
+                <div className={styles.linkMenu}>
+                  <Link href="/home">My Profile</Link>
+                  <Link href="/search">My Friends</Link>
+                  <Link href="/browse">My Photos</Link>
+                  <Link href="/share">My Notes</Link>
+                  <Link href="/invite">My Groups</Link>
+                  <Link href="/help">My Events</Link>
+                  <Link href="/logout">My Messages</Link>
+                  <Link href="/logout">My Account</Link>
+                  <Link href="/logout">My Privacy</Link>
+                </div>
+              </div>
             </div>
 
             <div className={styles.horizontalPane}>
@@ -96,14 +108,25 @@ export default function Home() {
 
               <main className={styles.main}>
                 <div className={styles.profileHeader}>
-                  Matt
-                  Profile (This is you)
-                  Facebook
+                  <div>
+                    Matt
+                  </div>
+                  <div>
+                    Profile (This is you)
+                  </div>
+                  <div>
+                    Facebook
+                  </div>
                 </div>
                 <div className={styles.profileBody}>
                   <div className={styles.profileBodySide}>
-                    <div>This is a photo of you</div>
-                    <div className={styles.profileSideLinks}>
+                    <Image
+                      style={{ display: "block" }}
+                      src={mattPic}
+                      alt="Picture of the current user"
+                      width={200}
+                    />
+                    <div className={styles.linkMenu}>
                       <Link href="/photos">View more photos of me</Link>
                       <Link href="/notes">Read Notes about Me</Link>
                       <Link href="/profile">Edit My Profile</Link>
@@ -118,6 +141,7 @@ export default function Home() {
                     <p>Iowa State Alum</p>
                     <address>Silicon Valley, California</address>
                     <hr/>
+
                     <InterestTable interests={profile_interests} />
 
                     <Accordion title="Mini-feed">

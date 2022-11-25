@@ -5,6 +5,9 @@
   --grey: #898F9C;
   --black: #000000;
   --white: white;
+
+  --subbanner-background: #6E86B6;
+  --accordion-title-background: #DADEEA;
 }
 
 html, body {
@@ -23,10 +26,6 @@ a {
   box-sizing: border-box;
 }
 
-details {
-  width: 100%;
-  background: var(--grey);
-  font-weight: bold;
-  border-top: 1px solid var(--blue);
-  color: blue;
+address {
+  font-style: normal;
 }

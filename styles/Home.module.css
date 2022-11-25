@@ -8,7 +8,7 @@
 */
 .siteWindowContainer {
   height: 100vh;
-  padding: 10rem;
+  padding: 10rem 0;
 }
 
 /* Window that the site is shown in.
@@ -20,9 +20,8 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  overflow: scroll;
   aspect-ratio: 3 / 2;
-  border: 1px solid red;
+  border: 2px solid red;
 }
 
 /* Root of the visual content of the facebook app. */
@@ -30,27 +29,71 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  border-radius: 10px;
   background-color: white;
   width: 100%;
   height: 100%;
+  overflow: scroll;
+  padding: 0.5rem;
 }
 
+
+/* Menu on the top bar */
+.menu {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  color: var(--white);
+  background-color: var(--blue);
+  padding: 1rem;
+  justify-content: space-between;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+}
+
+.fblogo {
+  width: 50%;
+}
+
+.menuLinks {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.menuLinks > a {
+  display: block;
+  padding-left: 1rem;
+  color: var(--grey);
+}
+
+/* Thing in the middle? */
 .horizontalPane {
   display: flex;
   flex-direction: column;
   height: 100%;
-  border-radius: 30px;
+  border-radius: 10px;
   width: 100%;
-  padding: 1rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  border-left: 1px solid var(--grey);
+  border-right: 1px solid var(--grey);
 }
 
 /* sidebar of the site; global options */
+.sideColumn {
+  display: flex;
+  flex-direction: column;
+}
+
+.cornerLogo {
+  color: var(--grey);
+}
+
 .sidebar {
   display: flex;
   flex-direction: column;
+  padding: 0.5rem;
   width: 20%;
-  padding: 1rem;
 }
 
 /* Facebook app content that changes between pages. */
@@ -60,8 +103,13 @@
 }
 
 .profileHeader {
-  background-color: var(--grey);
+  font-weight: bold;
+  padding: 0.25rem 0.5rem;
+  background-color: var(--subbanner-background);
   color: var(--white);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 .profileBody {
@@ -74,13 +122,42 @@
   padding: 1rem;
 }
 
-.profileSideLinks {
-  display: flex;
-  flex-direction: column;
-}
-
 .profileBodyMain {
   width: 75%;
+}
+
+.detailContents {
+  background-color: var(--white);
+  font-weight: normal;
+}
+
+.detailContents > table > tr > td:first-of-type {
+  width: 25%;
+  color: var(--grey);
+}
+
+.detailContents > table > tr > td:last-of-type {
+  color: var(--black);
+}
+
+/* Accordion throughout the site. */
+.accordionWrapper {
+  display: block;
+  width: 100%;
+  padding: 0.5rem 0;
+}
+
+.accordion {
+  font-weight: bold;
+  border-top: 1px solid var(--blue);
+  color: var(--blue);
+}
+
+.accordion > summary {
+  justify-content: space-between;
+  padding: 0.25rem 1rem;
+  font-weight: bold;
+  background-color: var(--accordion-title-background)
 }
 
 
@@ -115,49 +192,15 @@
   }
 }
 
-/* Menu on the top bar */
-.menu {
-  width: 100%;
+.linkMenu {
   display: flex;
-  flex-direction: row;
-  color: var(--white);
-  background-color: var(--blue);
-  padding: 1rem;
-  justify-content: space-between;
+  flex-direction: column;
 }
 
-.fblogo {
-  width: 50%;
-}
-
-.menuLinks {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-}
-
-.menuLinks > a {
+.linkMenu > a {
   display: block;
-  padding-left: 1rem;
-}
-
-.detailContents {
-  background-color: var(--white);
-  font-weight: normal;
-}
-
-.detailContents > table > tr > td:first-of-type {
-  width: 25%;
-  color: var(--grey);
-}
-
-.detailContents > table > tr > td:last-of-type {
-  color: var(--black);
-}
-
-.accordion {
-}
-
-.accordion > summary {
-  justify-content: space-between;
+  padding-left: 0.25rem;
+  line-height: 1.5;
+  color: var(--blue);
+  border-bottom: 1px solid var(--grey);
 }
