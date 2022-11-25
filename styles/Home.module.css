@@ -136,6 +136,11 @@
   justify-content: space-around;
 }
 
+.menuLinks > a {
+  display: block;
+  padding-left: 1rem;
+}
+
 .detailContents {
   background-color: var(--white);
   font-weight: normal;
@@ -146,18 +151,13 @@
   color: var(--grey);
 }
 
-
 .detailContents > table > tr > td:last-of-type {
   color: var(--black);
 }
 
-
-.miniFeed {
+.accordion {
 }
 
-.miniFeed > summary {
+.accordion > summary {
   justify-content: space-between;
-}
-
-.personalInfo {
 }
