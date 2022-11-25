@@ -25,7 +25,9 @@ export default function Home() {
             <Link href="/logout">My Account</Link>
             <Link href="/logout">My Privacy</Link>
           </div>
+
           <div className={styles.horizontalPane}>
+
             <div className={styles.menu}>
               <div className={styles.fblogo}>facebook</div>
               <div className={styles.menuLinks}>
@@ -40,15 +42,52 @@ export default function Home() {
             </div>
 
             <main className={styles.main}>
-              <div></div>
+              <div className={styles.profileHeader}>
+                Matt
+                Profile (This is you)
+                Facebook
+              </div>
               <details className={styles.miniFeed}>
                 <summary>Mini-feed</summary>
-                mini feed that's hidden
+                <div className={styles.detailContents}>
+                  content that is hidden
+                </div>
               </details>
 
               <details className={styles.personalInfo}>
                 <summary>Personal Info <button>Edit</button></summary>
-                personal info that's hidden
+                <div className={styles.detailContents}>
+                  <table>
+                    <tr>
+                      <td>Political Views:</td>
+                      <td>Moderate</td>
+                    </tr>
+                    <tr>
+                      <td>Interests:</td>
+                      <td>Web Design, Photography, Almost All Music, Tennis, Nintendo DS Lite</td>
+                    </tr>
+
+                    <tr>
+                      <td>Favorite Music:</td>
+                      <td>100 Gecs, xaviersobased, bladee</td>
+                    </tr>
+
+                    <tr>
+                      <td>Favorite TV Shows:</td>
+                      <td>The 100</td>
+                    </tr>
+
+                    <tr>
+                      <td>Favorite Movies:</td>
+                      <td>Tarantino</td>
+                    </tr>
+
+                    <tr>
+                      <td>Favorite Quotes:</td>
+                      <td>"Drama is life with the dull bits cut out." - Alfred Hitchock</td>
+                    </tr>
+                  </table>
+                </div>
               </details>
             </main>
           </div>

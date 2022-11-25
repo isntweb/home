@@ -34,6 +34,7 @@
   display: flex;
   flex-direction: column;
   height: 100%;
+  border-radius: 30px;
 }
 
 /* sidebar of the site; global options */
@@ -41,6 +42,11 @@
   display: flex;
   flex-direction: column;
   width: 20%;
+}
+
+.profileHeader {
+  background-color: var(--grey);
+  color: var(--white);
 }
 
 /* Cute vercel thing, for now */
@@ -81,6 +87,8 @@
   flex-direction: row;
   color: var(--white);
   background-color: var(--blue);
+  padding: 1rem;
+  justify-content: space-between;
 }
 
 .fblogo {
@@ -100,9 +108,23 @@
   }
 }
 
-.miniFeed {
-  width: 100%;
+.detailContents {
+  background-color: var(--white);
+  font-weight: normal;
+}
 
+.detailContents > table > tr > td:first-of-type {
+  width: 25%;
+  color: var(--grey);
+}
+
+
+.detailContents > table > tr > td:last-of-type {
+  color: var(--black);
+}
+
+
+.miniFeed {
 }
 
 .miniFeed > summary {
@@ -110,5 +132,4 @@
 }
 
 .personalInfo {
-  width: 100%;
 }

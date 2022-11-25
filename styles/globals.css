@@ -31,3 +31,11 @@ a {
 /*     background: black; */
 /*   } */
 /* } */
+
+details {
+  width: 100%;
+  background: var(--grey);
+  font-weight: bold;
+  border-top: 1px solid var(--blue);
+  color: blue;
+}
