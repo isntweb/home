@@ -1,33 +1,39 @@
-
 /* Everything on the site. */
 .container {
   padding: 0 2rem;
 }
 
+/* Container that the window site is shown in.
+ * This should occupy the full page and lay out the site window.
+*/
+.siteWindowContainer {
+  height: 100vh;
+  padding: 10rem;
+}
+
+/* Window that the site is shown in.
+ * this boxes in the internal site to a fixed size.
+*/
 .siteWindow {
-  min-height: 100vh;
-  padding: 6rem 2rem;
-  flex: 1;
+  width: 100%;
+  height: 100%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   overflow: scroll;
+  aspect-ratio: 3 / 2;
+  border: 1px solid red;
 }
 
-/* Visual content of the facebook app. */
+/* Root of the visual content of the facebook app. */
 .body {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   border-radius: 10px;
   background-color: white;
-}
-
-
-/* Facebook app content that changes between pages. */
-.main {
-  display: flex;
-  flex-direction: column;
+  width: 100%;
+  height: 100%;
 }
 
 .horizontalPane {
@@ -35,6 +41,8 @@
   flex-direction: column;
   height: 100%;
   border-radius: 30px;
+  width: 100%;
+  padding: 1rem;
 }
 
 /* sidebar of the site; global options */
@@ -42,6 +50,13 @@
   display: flex;
   flex-direction: column;
   width: 20%;
+  padding: 1rem;
+}
+
+/* Facebook app content that changes between pages. */
+.main {
+  display: flex;
+  flex-direction: column;
 }
 
 .profileHeader {
