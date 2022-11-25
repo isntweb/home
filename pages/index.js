@@ -50,6 +50,16 @@ export default function Home() {
               <div className={styles.profileBody}>
                 <div className={styles.profileBodySide}>
                   <div>This is a photo of you</div>
+                  <Link>View more photos of me</Link>
+                  <Link>Read Notes about Me</Link>
+                  <Link>Edit My Profile</Link>
+                  <Link>Edit My Picture</Link>
+                  <Link>Edit My Privacy</Link>
+                  <Link>Create a Profile Badge</Link>
+
+                  /* the 'status' pane goes here. not sure what it contains. can't scroll down enough/ */
+                  <div>
+                  </div>
                 </div>
                 <div className={styles.profileBodyMain}>
               <details className={styles.miniFeed}>
