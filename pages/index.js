@@ -70,7 +70,7 @@ export default function Home() {
                   <table>
                     <tr>
                       <td>Email:</td>
-                      <td>username@facebook.com</td>
+                      <td><a href="mailto:username@example.com"/>username@example.com</td>
                     </tr>
 
                     <tr>
@@ -80,7 +80,7 @@ export default function Home() {
 
                     <tr>
                       <td>Mobile:</td>
-                      <td>911</td>
+                      <td><a href="sms://+1-503-555-0199"/>+1 503-555-0199</td>
                     </tr>
 
                     <tr>
