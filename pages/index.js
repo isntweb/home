@@ -50,8 +50,8 @@ const personal_interests = [
 
 const TopMenu = () => {
   return (
-    <div className={styles.menu}>
-      <div className={styles.fblogo}>facebook</div>
+    <div className={styles.topMenu}>
+      <h1 className={styles.fblogo}>facebook</h1>
       <div className={styles.menuLinks}>
         <Link href="/home">home</Link>
         <Link href="/search">search</Link>
@@ -128,8 +128,8 @@ export default function Home() {
                   </div>
                   <div className={styles.profileBodyMain}>
                     <h1>Matt Callum Lastname</h1>
-                    <p>Facebook</p>
-                    <p>Iowa State Alum</p>
+                    <div>Facebook</div>
+                    <div>Iowa State Alum</div>
                     <address>Silicon Valley, California</address>
                     <hr/>
 
