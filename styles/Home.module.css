@@ -49,6 +49,19 @@
   color: var(--white);
 }
 
+.profileBody {
+  display: flex;
+  flex-direction: row;
+}
+
+.profileBodySide {
+  width: 25%;
+}
+
+.profileBodyMain {
+  width: 75%;
+}
+
 /* Cute vercel thing, for now */
 .footer {
   display: flex;

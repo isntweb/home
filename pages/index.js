@@ -47,6 +47,11 @@ export default function Home() {
                 Profile (This is you)
                 Facebook
               </div>
+              <div className={styles.profileBody}>
+                <div className={styles.profileBodySide}>
+                  <div>This is a photo of you</div>
+                </div>
+                <div className={styles.profileBodyMain}>
               <details className={styles.miniFeed}>
                 <summary>Mini-feed</summary>
                 <div className={styles.detailContents}>
@@ -89,6 +94,8 @@ export default function Home() {
                   </table>
                 </div>
               </details>
+                </div>
+              </div>
             </main>
           </div>
         </div>
