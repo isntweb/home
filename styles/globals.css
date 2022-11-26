@@ -7,11 +7,8 @@
   --white: white;
 
   --menu-text: #D8DFEA;
-
-
   --subbanner-background: #6E86B6;
   --accordion-title-background: #DADEEA;
-
   --radius: 6px;
 }
 
@@ -34,11 +31,6 @@ h1 {
 * {
   box-sizing: border-box;
 }
-
-/* p { */
-/*   padding: 0; */
-/*   margin: 0; */
-/* } */
 
 address {
   font-style: normal;
