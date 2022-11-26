@@ -15,12 +15,11 @@
  * this boxes in the internal site to a fixed size.
 */
 .siteWindow {
-  width: 100%;
-  height: 100%;
   display: flex;
+  margin: auto;
   flex-direction: row;
   justify-content: space-between;
-  aspect-ratio: 3 / 2;
+  /* aspect-ratio: 3 / 2; */
   border: 2px solid red;
 }
 

@@ -1,4 +1,5 @@
 import '../styles/globals.css'
+import '../styles/facebook.css'
 import HomePage from '../components/HomePage.js'
 
 function MyApp({ Component, pageProps }) {
