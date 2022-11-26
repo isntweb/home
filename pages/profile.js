@@ -52,19 +52,20 @@ const personal_interests = [
 
 export default function Home() {
   return (
-    <TopMenu side={<ProfileMenu />}>
-      <main className={styles.main}>
-        <div className={styles.profileHeader}>
-          <div>
-            Matt
-          </div>
-          <div>
-            Profile (This is you)
-          </div>
-          <div>
-            Facebook
-          </div>
+    <TopMenu side={<ProfileMenu />} header={
+      <>
+        <div>
+          Matt
         </div>
+        <div>
+          Profile (This is you)
+        </div>
+        <div>
+          Facebook
+        </div>
+      </>
+    }>
+      <main className={styles.main}>
         <div className={styles.profileBody}>
           <div className={styles.profileBodySide}>
             <Image

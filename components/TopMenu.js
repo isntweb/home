@@ -1,7 +1,7 @@
 import styles from './TopMenu.module.css'
 import Link from 'next/link'
 
-const TopMenu = ({side, children }) => {
+const TopMenu = ({side, header, children }) => {
   return (
     <div className={styles.body}>
       <div style={{ display: 'flex' }}>
@@ -24,16 +24,19 @@ const TopMenu = ({side, children }) => {
           {side}
         </div>
         <div className={styles.horizontalPane}>
+          <div className={styles.profileHeader}>
+            {header}
+          </div>
           <div className={styles.horizontalPaneWindow}>
             {children}
           </div>
           <footer className={styles.footer}>
             <div>
-              <a>about</a>
-              <a>jobs</a>
-              <a>advertise</a>
-              <a>terms</a>
-              <a>privacy</a>
+              <Link href="/about">about</Link>
+              <Link href="/jobs">jobs</Link>
+              <Link href="/advertise">advertise</Link>
+              <Link href="/terms">terms</Link>
+              <Link href="/privacy">privacy</Link>
             </div>
             <div>a Mark Zuckerberg production </div>
             <div>Facebook C 2005</div>

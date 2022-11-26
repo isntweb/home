@@ -4,19 +4,6 @@
   flex-direction: column;
 }
 
-.profileHeader {
-  font-weight: bold;
-  font-size: 14px;
-  line-height: 23px;
-
-  padding: 0.25rem 0.5rem;
-  background-color: var(--subbanner-background);
-  color: var(--white);
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
-
 .profileBody {
   display: flex;
   flex-direction: row;

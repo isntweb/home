@@ -5,7 +5,7 @@ import TopMenu from '../components/TopMenu';
 
 export default function Home() {
   return (
-    <TopMenu side={<div>hey</div>}>
+    <TopMenu side={<div>hey</div>} header="Welcome to Facebook!">
       <p>
         Facebook is an online directory that connects people through social networks at schools.
       </p>
@@ -16,7 +16,6 @@ export default function Home() {
       <p>
         The site is open to a lot of schools, but not everywhere yet. We're working on it.
       </p>
-
       <p>
         You can use Facebook to:
       </p>
