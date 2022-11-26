@@ -23,7 +23,7 @@
   justify-content: space-between;
   padding: 2rem;
   background-color: var(--white);
-  border: 2px solid red;
+  /* border: 2px solid red; */
 }
 
 /* Cute vercel thing, for now */
