@@ -1,0 +1,34 @@
+.sidebar {
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  padding-top: 1rem;
+  padding-right: 0.75rem;
+}
+
+.linkMenu {
+  display: flex;
+  flex-direction: column;
+}
+
+.linkMenu > a {
+  display: block;
+  padding-left: 0.25rem;
+  line-height: 1.5;
+  color: var(--blue);
+  border-bottom: 1px solid var(--grey);
+}
+
+/* Thing in the middle? */
+.horizontalPane {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  margin-left: -1px;
+  margin-right: -1px;
+  border-left: 1px solid var(--grey);
+  border-right: 1px solid var(--grey);
+}
