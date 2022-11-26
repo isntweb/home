@@ -1,8 +1,7 @@
 /* Root of the visual content of the facebook app. */
 .body {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  flex-direction: column;
   background-color: white;
   width: 100%;
   height: 100%;
@@ -27,7 +26,6 @@
 .fblogo {
   width: 50%;
   display: block;
-  /* height: 33px; */
 }
 
 .menuLinks {
@@ -53,23 +51,17 @@
   display: flex;
   flex-direction: column;
   height: 100%;
+  width: 100%;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
-  width: 100%;
   margin-left: -1px;
   margin-right: -1px;
   border-left: 1px solid var(--grey);
   border-right: 1px solid var(--grey);
 }
 
-/* sidebar of the site; global options */
-.sideColumn {
-  display: flex;
-  flex-direction: column;
-  width: 20%;
-}
-
 .cornerLogo {
+  width: 200px;
   background-color: var(--grey);
   padding: 1rem;
   margin-right: -1rem;
@@ -77,6 +69,7 @@
 }
 
 .sidebar {
+  width: 200px;
   display: flex;
   flex-direction: column;
   padding-top: 1rem;
