@@ -23,7 +23,6 @@
   justify-content: space-between;
   padding: 2rem;
   background-color: var(--white);
-  /* aspect-ratio: 3 / 2; */
   border: 2px solid red;
 }
 
