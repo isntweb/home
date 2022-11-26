@@ -9,30 +9,40 @@
   padding: 0.5rem;
 }
 
+.pageHeader {
+  display: flex;
+  background-image: url("../public/pageheaderbg.gif");
+  background-repeat: no-repeat;
+}
+
 .cornerLogo {
-  width: 200px;
-  background-color: var(--grey);
-  padding: 1rem;
+  width: 130px;
+  height: 33px;
+  border: 1px solid red;
   margin-right: -1rem;
-  border-radius: var(--radius);
 }
 
 .topMenu {
-  width: 100%;
   display: flex;
   flex-direction: row;
-  color: var(--white);
-  background-color: var(--blue);
+  color: var(--black);
+  /* background-color: var(--blue); */
   justify-content: space-between;
   align-items: center;
-  padding: 0 1rem;
+  margin-left: 1.2rem;
+  padding-left: 0.5rem;
   border-top-left-radius: var(--radius);
   border-top-right-radius: var(--radius);
+
+  /* opacity: 0.5; */
 }
 
 .fblogo {
-  width: 50%;
-  display: block;
+  opacity: 0.2;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  margin-right: 20px;
 }
 
 /* Menu on the top bar */
@@ -40,18 +50,19 @@
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+  font-size: 14px;
 }
 
 .menuLinks > a {
   display: block;
   margin-left: 1rem;
-  padding: 0.125rem 0.25rem;
+  padding: 2px 4px;
   color: var(--menu-text);
 }
 
 .menuLinks > a:hover {
   color: var(--grey);
-  background-color: var(--blue);
+  background-color: var(--subbanner-background);
 }
 
 .sidebar {

@@ -4,8 +4,8 @@ import Link from 'next/link'
 const TopMenu = ({side, header, children }) => {
   return (
     <div className={styles.body}>
-      <div style={{ display: 'flex' }}>
-        <div className={styles.cornerLogo}> tja </div>
+      <div className={styles.pageHeader}>
+        <div className={styles.cornerLogo}/>
         <div className={styles.topMenu}>
           <h1 className={styles.fblogo}>facebook</h1>
           <div className={styles.menuLinks}>
