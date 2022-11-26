@@ -46,18 +46,50 @@ const personal_interests = [
   ["Favorite Quotes", ["\"Drama is life with the dull bits cut out.\" - Alfred Hitchock"]],
 ];
 
-const TopMenu = () => {
+const TopMenu = ({ children }) => {
   return (
-    <div className={styles.topMenu}>
-      <h1 className={styles.fblogo}>facebook</h1>
-      <div className={styles.menuLinks}>
-        <Link href="/home">home</Link>
-        <Link href="/search">search</Link>
-        <Link href="/browse">browse</Link>
-        <Link href="/share">share</Link>
-        <Link href="/invite">invite</Link>
-        <Link href="/help">help</Link>
-        <Link href="/logout">logout</Link>
+    <div className={styles.body}>
+      <div className={styles.horizontalPane}>
+        <div style={{ display: 'flex' }}>
+        <div className={styles.cornerLogo}> tja </div>
+          <div className={styles.topMenu}>
+            <h1 className={styles.fblogo}>facebook</h1>
+            <div className={styles.menuLinks}>
+              <Link href="/home">home</Link>
+              <Link href="/search">search</Link>
+              <Link href="/browse">browse</Link>
+              <Link href="/share">share</Link>
+              <Link href="/invite">invite</Link>
+              <Link href="/help">help</Link>
+              <Link href="/logout">logout</Link>
+            </div>
+          </div>
+        </div>
+        {children}
+      </div>
+    </div>
+  );
+}
+
+const ProfileMenu = ({ children }) => {
+  return (
+    <div style={{ display: 'flex' }}>
+      <div className={styles.sidebar}>
+        <input/>
+        <div className={styles.linkMenu}>
+          <Link href="/home">My Profile</Link>
+          <Link href="/search">My Friends</Link>
+          <Link href="/browse">My Photos</Link>
+          <Link href="/share">My Notes</Link>
+          <Link href="/invite">My Groups</Link>
+          <Link href="/help">My Events</Link>
+          <Link href="/logout">My Messages</Link>
+          <Link href="/logout">My Account</Link>
+          <Link href="/logout">My Privacy</Link>
+        </div>
+      </div>
+      <div>
+        {children}
       </div>
     </div>
   );
@@ -65,28 +97,8 @@ const TopMenu = () => {
 
 export default function Home() {
   return (
-    <div className={styles.body}>
-      <div className={styles.sideColumn}>
-        <div className={styles.cornerLogo}> tja </div>
-        <div className={styles.sidebar}>
-          <input/>
-          <div className={styles.linkMenu}>
-            <Link href="/home">My Profile</Link>
-            <Link href="/search">My Friends</Link>
-            <Link href="/browse">My Photos</Link>
-            <Link href="/share">My Notes</Link>
-            <Link href="/invite">My Groups</Link>
-            <Link href="/help">My Events</Link>
-            <Link href="/logout">My Messages</Link>
-            <Link href="/logout">My Account</Link>
-            <Link href="/logout">My Privacy</Link>
-          </div>
-        </div>
-      </div>
-
-      <div className={styles.horizontalPane}>
-        <TopMenu />
-
+    <TopMenu>
+      <ProfileMenu>
         <main className={styles.main}>
           <div className={styles.profileHeader}>
             <div>
@@ -135,7 +147,8 @@ export default function Home() {
             </div>
           </div>
         </main>
-      </div>
-    </div>
+
+      </ProfileMenu>
+    </TopMenu>
   );
 }
