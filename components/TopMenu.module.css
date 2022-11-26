@@ -70,10 +70,10 @@
   width: 132px;
   display: flex;
   flex-direction: column;
-  padding: 0.25rem;
+  padding: 0.125rem 0;
   font-weight: bold;
   color: var(--grey);
-  border: 1px solid var(--grey);
+  padding-right: 0.5rem;
   border-right: none;
 }
 
@@ -96,13 +96,13 @@
   flex-direction: column;
   border-top: 1px solid var(--white);
   justify-content: center;
-  padding: 1rem;
+  padding: 0.5rem;
   align-items: center;
 }
 
 .footer a {
   display: inline-block;
-  padding: 0 0.5rem;
+  padding: 0 0.375rem;
   color: var(--blue);
 }
 
