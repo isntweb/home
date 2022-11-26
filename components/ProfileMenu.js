@@ -1,7 +1,7 @@
 import styles from './ProfileMenu.module.css'
 import Link from 'next/link';
 
-const ProfileMenu = ({ children }) => {
+const ProfileMenu = () => {
   return (
     <div style={{ display: 'flex' }}>
       <div className={styles.sidebar}>
@@ -17,9 +17,6 @@ const ProfileMenu = ({ children }) => {
           <Link href="/logout">My Account</Link>
           <Link href="/logout">My Privacy</Link>
         </div>
-      </div>
-    <div className={styles.horizontalPane}>
-        {children}
       </div>
     </div>
   );

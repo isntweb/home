@@ -1,7 +1,7 @@
 import styles from './TopMenu.module.css'
 import Link from 'next/link'
 
-const TopMenu = ({ children }) => {
+const TopMenu = ({side, children }) => {
   return (
     <div className={styles.body}>
       <div style={{ display: 'flex' }}>
@@ -19,7 +19,25 @@ const TopMenu = ({ children }) => {
           </div>
         </div>
       </div>
-      {children}
+      <div style={{ display: 'flex' }}>
+        <div className={styles.sidebar}>
+            {side}
+        </div>
+        <div className={styles.horizontalPane}>
+          {children}
+        </div>
+      </div>
+      <footer>
+        <div style={{ display: 'flex', flexDirection: 'row' }}>
+          <a>about</a>
+          <a>jobs</a>
+          <a>advertise</a>
+          <a>terms</a>
+          <a>privacy</a>
+        </div>
+        <div>a Mark Zuckerberg production </div>
+        <div>Facebook C 2005</div>
+      </footer>
     </div>
   );
 }

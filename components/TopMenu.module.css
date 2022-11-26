@@ -53,3 +53,21 @@
   color: var(--grey);
   background-color: blue;
 }
+
+.sidebar {
+  min-width: 150px;
+  display: flex;
+  flex-direction: column;
+  padding-top: 1rem;
+  padding-right: 0.75rem;
+  border: 1px solid var(--grey);
+  border-right: none;
+}
+
+/* Thing in the middle? */
+.horizontalPane {
+  display: flex;
+  flex-direction: column;
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--grey);
+}

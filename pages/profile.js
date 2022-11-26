@@ -52,58 +52,55 @@ const personal_interests = [
 
 export default function Home() {
   return (
-    <TopMenu>
-      <ProfileMenu>
-        <main className={styles.main}>
-          <div className={styles.profileHeader}>
-            <div>
-              Matt
-            </div>
-            <div>
-              Profile (This is you)
-            </div>
-            <div>
-              Facebook
+    <TopMenu side={<ProfileMenu />}>
+      <main className={styles.main}>
+        <div className={styles.profileHeader}>
+          <div>
+            Matt
+          </div>
+          <div>
+            Profile (This is you)
+          </div>
+          <div>
+            Facebook
+          </div>
+        </div>
+        <div className={styles.profileBody}>
+          <div className={styles.profileBodySide}>
+            <Image
+              style={{ display: "block" }}
+              src={mattPic}
+              alt="Picture of the current user"
+              width={200}
+            />
+            <div className={styles.linkMenu}>
+              <Link href="/photos">View more photos of me</Link>
+              <Link href="/notes">Read Notes about Me</Link>
+              <Link href="/profile">Edit My Profile</Link>
+              <Link href="/pictures">Edit My Picture</Link>
+              <Link href="/privacy">Edit My Privacy</Link>
+              <Link href="/badge">Create a Profile Badge</Link>
             </div>
           </div>
-          <div className={styles.profileBody}>
-            <div className={styles.profileBodySide}>
-              <Image
-                style={{ display: "block" }}
-                src={mattPic}
-                alt="Picture of the current user"
-                width={200}
-              />
-              <div className={styles.linkMenu}>
-                <Link href="/photos">View more photos of me</Link>
-                <Link href="/notes">Read Notes about Me</Link>
-                <Link href="/profile">Edit My Profile</Link>
-                <Link href="/pictures">Edit My Picture</Link>
-                <Link href="/privacy">Edit My Privacy</Link>
-                <Link href="/badge">Create a Profile Badge</Link>
-              </div>
-            </div>
-            <div className={styles.profileBodyMain}>
-              <h1>Matt Callum Lastname</h1>
-              <div>Facebook</div>
-              <div>Iowa State Alum</div>
-              <address>Silicon Valley, California</address>
-              <hr/>
+          <div className={styles.profileBodyMain}>
+            <h1>Matt Callum Lastname</h1>
+            <div>Facebook</div>
+            <div>Iowa State Alum</div>
+            <address>Silicon Valley, California</address>
+            <hr/>
 
-              <InterestTable interests={profile_interests} />
+            <InterestTable interests={profile_interests} />
 
-              <Accordion title="Mini-feed">
-                content that is hidden
-              </Accordion>
+            <Accordion title="Mini-feed">
+              content that is hidden
+            </Accordion>
 
-              <Accordion title="Personal Info" edit>
-                <InterestTable interests={personal_interests} />
-              </Accordion>
-            </div>
+            <Accordion title="Personal Info" edit>
+              <InterestTable interests={personal_interests} />
+            </Accordion>
           </div>
-        </main>
-
-      </ProfileMenu>
+        </div>
+      </main>
     </TopMenu>
   );
 }
