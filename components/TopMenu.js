@@ -21,23 +21,25 @@ const TopMenu = ({side, children }) => {
       </div>
       <div style={{ display: 'flex' }}>
         <div className={styles.sidebar}>
-            {side}
+          {side}
         </div>
         <div className={styles.horizontalPane}>
-          {children}
+          <div className={styles.horizontalPaneWindow}>
+            {children}
+          </div>
+          <footer className={styles.footer}>
+            <div>
+              <a>about</a>
+              <a>jobs</a>
+              <a>advertise</a>
+              <a>terms</a>
+              <a>privacy</a>
+            </div>
+            <div>a Mark Zuckerberg production </div>
+            <div>Facebook C 2005</div>
+          </footer>
         </div>
       </div>
-      <footer>
-        <div style={{ display: 'flex', flexDirection: 'row' }}>
-          <a>about</a>
-          <a>jobs</a>
-          <a>advertise</a>
-          <a>terms</a>
-          <a>privacy</a>
-        </div>
-        <div>a Mark Zuckerberg production </div>
-        <div>Facebook C 2005</div>
-      </footer>
     </div>
   );
 }

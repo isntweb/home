@@ -51,7 +51,7 @@
 
 .menuLinks > a:hover {
   color: var(--grey);
-  background-color: blue;
+  background-color: var(--blue);
 }
 
 .sidebar {
@@ -68,6 +68,26 @@
 .horizontalPane {
   display: flex;
   flex-direction: column;
+}
+
+.horizontalPaneWindow {
+  display: flex;
+  flex-direction: column;
   padding: 0.5rem 1rem;
   border: 1px solid var(--grey);
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid var(--white);
+  justify-content: center;
+  padding: 1rem;
+  align-items: center;
+}
+
+.footer a {
+  display: inline-block;
+  padding: 0 0.5rem;
+  color: var(--blue);
 }
