@@ -1,4 +1,3 @@
-import Head from 'next/head'
 import Image from 'next/image'
 import mattPic from '../public/matt.png'
 import Link from 'next/link'
@@ -21,12 +20,11 @@ const InterestTable = ({ interests }) => {
   return (
     <table className={styles.interestTable}>
       {interests.map(([name, body]) => (
-          <tr>
-            <td> {name}: </td>
-            <td> {body.map((component) => (<span>{component}</span>))} </td>
-          </tr>
-        )
-      )}
+        <tr id={name}>
+          <td> {name}: </td>
+          <td> {body.map((component) => (<span id={component}>{component}</span>))} </td>
+        </tr>
+      ))}
     </table>
   );
 }
@@ -67,101 +65,77 @@ const TopMenu = () => {
 
 export default function Home() {
   return (
-    <div className={styles.container}>
-      <Head>
-        <title>isnt.online</title>
-        <meta name="description" content="isnt.online is a creative studio... blah blah blah." />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-      <div className={styles.siteWindowContainer}>
-        <div className={styles.siteWindow}>
-          <div className={styles.body}>
-            <div className={styles.sideColumn}>
-              <div className={styles.cornerLogo}> tja </div>
-              <div className={styles.sidebar}>
-                <input/>
-                <div className={styles.linkMenu}>
-                  <Link href="/home">My Profile</Link>
-                  <Link href="/search">My Friends</Link>
-                  <Link href="/browse">My Photos</Link>
-                  <Link href="/share">My Notes</Link>
-                  <Link href="/invite">My Groups</Link>
-                  <Link href="/help">My Events</Link>
-                  <Link href="/logout">My Messages</Link>
-                  <Link href="/logout">My Account</Link>
-                  <Link href="/logout">My Privacy</Link>
-                </div>
-              </div>
-            </div>
-
-            <div className={styles.horizontalPane}>
-              <TopMenu />
-
-              <main className={styles.main}>
-                <div className={styles.profileHeader}>
-                  <div>
-                    Matt
-                  </div>
-                  <div>
-                    Profile (This is you)
-                  </div>
-                  <div>
-                    Facebook
-                  </div>
-                </div>
-                <div className={styles.profileBody}>
-                  <div className={styles.profileBodySide}>
-                    <Image
-                      style={{ display: "block" }}
-                      src={mattPic}
-                      alt="Picture of the current user"
-                      width={200}
-                    />
-                    <div className={styles.linkMenu}>
-                      <Link href="/photos">View more photos of me</Link>
-                      <Link href="/notes">Read Notes about Me</Link>
-                      <Link href="/profile">Edit My Profile</Link>
-                      <Link href="/pictures">Edit My Picture</Link>
-                      <Link href="/privacy">Edit My Privacy</Link>
-                      <Link href="/badge">Create a Profile Badge</Link>
-                    </div>
-                  </div>
-                  <div className={styles.profileBodyMain}>
-                    <h1>Matt Callum Lastname</h1>
-                    <div>Facebook</div>
-                    <div>Iowa State Alum</div>
-                    <address>Silicon Valley, California</address>
-                    <hr/>
-
-                    <InterestTable interests={profile_interests} />
-
-                    <Accordion title="Mini-feed">
-                      content that is hidden
-                    </Accordion>
-
-                    <Accordion title="Personal Info" edit>
-                      <InterestTable interests={personal_interests} />
-                    </Accordion>
-                  </div>
-                </div>
-              </main>
-            </div>
+    <div className={styles.body}>
+      <div className={styles.sideColumn}>
+        <div className={styles.cornerLogo}> tja </div>
+        <div className={styles.sidebar}>
+          <input/>
+          <div className={styles.linkMenu}>
+            <Link href="/home">My Profile</Link>
+            <Link href="/search">My Friends</Link>
+            <Link href="/browse">My Photos</Link>
+            <Link href="/share">My Notes</Link>
+            <Link href="/invite">My Groups</Link>
+            <Link href="/help">My Events</Link>
+            <Link href="/logout">My Messages</Link>
+            <Link href="/logout">My Account</Link>
+            <Link href="/logout">My Privacy</Link>
           </div>
         </div>
       </div>
 
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <span className={styles.logo}>
-            <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
-          </span>
-        </a>
-      </footer>
+      <div className={styles.horizontalPane}>
+        <TopMenu />
+
+        <main className={styles.main}>
+          <div className={styles.profileHeader}>
+            <div>
+              Matt
+            </div>
+            <div>
+              Profile (This is you)
+            </div>
+            <div>
+              Facebook
+            </div>
+          </div>
+          <div className={styles.profileBody}>
+            <div className={styles.profileBodySide}>
+              <Image
+                style={{ display: "block" }}
+                src={mattPic}
+                alt="Picture of the current user"
+                width={200}
+              />
+              <div className={styles.linkMenu}>
+                <Link href="/photos">View more photos of me</Link>
+                <Link href="/notes">Read Notes about Me</Link>
+                <Link href="/profile">Edit My Profile</Link>
+                <Link href="/pictures">Edit My Picture</Link>
+                <Link href="/privacy">Edit My Privacy</Link>
+                <Link href="/badge">Create a Profile Badge</Link>
+              </div>
+            </div>
+            <div className={styles.profileBodyMain}>
+              <h1>Matt Callum Lastname</h1>
+              <div>Facebook</div>
+              <div>Iowa State Alum</div>
+              <address>Silicon Valley, California</address>
+              <hr/>
+
+              <InterestTable interests={profile_interests} />
+
+              <Accordion title="Mini-feed">
+                content that is hidden
+              </Accordion>
+
+              <Accordion title="Personal Info" edit>
+                <InterestTable interests={personal_interests} />
+              </Accordion>
+            </div>
+          </div>
+        </main>
+      </div>
     </div>
   )
 }
