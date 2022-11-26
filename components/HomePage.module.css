@@ -9,6 +9,7 @@
 .siteWindowContainer {
   height: 100vh;
   padding: 10rem 0;
+  margin: auto;
 }
 
 /* Window that the site is shown in.
@@ -19,6 +20,8 @@
   margin: auto;
   flex-direction: row;
   justify-content: space-between;
+  padding: 2rem;
+  background-color: var(--white);
   /* aspect-ratio: 3 / 2; */
   border: 2px solid red;
 }

@@ -1,6 +1,5 @@
 /* Root of the visual content of the facebook app. */
 .body {
-
   display: flex;
   flex-direction: column;
   background-color: white;
