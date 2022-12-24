@@ -1,0 +1,8 @@
+menu {
+    margin: -1rem -0.75rem;
+    background: rgb(0, 0, 204);
+    padding: 1rem;
+    color: rgb(255, 255, 255);
+    font: / 1rem / 1.25 \ "VCR OSD Mono", "Lucida Console", monospace;
+    position: relative;
+}

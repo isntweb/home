@@ -1,0 +1,20 @@
+menu {
+    margin: -1rem -0.75rem;
+    background: rgb(0, 0, 204);
+    padding: 1rem;
+    color: rgb(255, 255, 255);
+    font: / 1rem / 1.25 \ "VCR OSD Mono", "Lucida Console", monospace;
+    position: relative;
+}
+
+background {
+    pointer-events: none;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    margin: 0px;
+    width: 100%;
+    height: 100%;
+    mix-blend-mode: soft-light;
+    image-rendering: pixelated;
+}
