@@ -10,8 +10,10 @@ const HomePage = ({ children }) => {
         <meta name="description" content="isnt.online is a creative studio... blah blah blah." />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+
       <div className={styles.siteWindowContainer}>
         <div className={styles.siteWindow}>
+
           {children}
         </div>
       </div>

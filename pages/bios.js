@@ -4,7 +4,7 @@ const Bios = () => (
   <div className={styles.menu}>
     <img src="https://i.pinimg.com/originals/b6/fe/0c/b6fe0c5fd3c211e729aabeca0597fa0e.gif" className={styles.background}/>
     <div className={styles.title}>
-      Tea Brewing Setup Utility - Copyleft 1984-1999 tmg GbR
+      Coffee Machine Setup Utility - Copyleft 2222-9999 isnt AB
     </div>
     <div className={styles.menuBorder}>
         <div className={styles.menuBody}>
