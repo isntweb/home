@@ -1,13 +1,16 @@
-menu {
-    margin: -1rem -0.75rem;
+.menu {
     background: rgb(0, 0, 204);
     padding: 1rem;
     color: rgb(255, 255, 255);
-    font: / 1rem / 1.25 \ "VCR OSD Mono", "Lucida Console", monospace;
+    font-family: "VCR OSD Mono", "Lucida Console", monospace;
+    font-size: 1rem;
+
     position: relative;
+    width: 100%;
+    height: 100%;
 }
 
-background {
+.background {
     pointer-events: none;
     position: absolute;
     top: 0px;
@@ -17,4 +20,31 @@ background {
     height: 100%;
     mix-blend-mode: soft-light;
     image-rendering: pixelated;
+}
+
+.title {
+    padding: 1.5rem;
+    text-align: center;
+}
+
+.menuBorder {
+    border: 2px ridge rgb(255, 255, 255) ;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 2px;
+}
+
+.menuBody {
+    border: 2px double rgb(255, 255, 255);
+    width: 50%;
+    padding: 1.5rem;
+    color: rgb(245, 245, 71);
+    line-height: 2.5;
+}
+
+.menuFooter1 {
+    border: 2px double rgb(255, 255, 255);
+    width: 100%;
+    padding: 1.5rem;
+    display: flex;
 }
