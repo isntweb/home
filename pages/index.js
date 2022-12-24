@@ -1,9 +1,9 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import styles from '../styles/Home.module.css'
-import TopMenu from '../components/TopMenu';
+import TopMenu from '../components/TopMenu'
 
-export default function Home() {
+export default function Facebook() {
   return (
     <TopMenu side={
       <>
