@@ -8,10 +8,14 @@ const Bios = () => (
     </div>
     <div className={styles.menuBorder}>
         <div className={styles.menuBody}>
-          Hey
+          <ul>
+            <li>Hey</li>
+          </ul>
         </div>
         <div className={styles.menuBody}>
-          The girl reading this
+          <ul>
+            <li>The girl reading this</li>
+          </ul>
         </div>
         <wh className={styles.menuFooter1}>
             <div style={{ width: '50%'}}>
