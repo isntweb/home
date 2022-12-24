@@ -1,7 +1,9 @@
-import styles from '../styles/Bios.module.css';
+import styles from '../styles/Bios.module.css'
+import Image from 'next/image'
 
 const Bios = () => (
   <div className={styles.menu}>
+    <Image src="/bios-background.gif" alt="" className={styles.background} height={400} width={800}/>
     <img src="https://i.pinimg.com/originals/b6/fe/0c/b6fe0c5fd3c211e729aabeca0597fa0e.gif" className={styles.background}/>
     <div className={styles.title}>
       Coffee Machine Setup Utility - Copyleft 2222-9999 isnt AB
