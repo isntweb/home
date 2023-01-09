@@ -38,8 +38,8 @@ const TopMenu = ({side, header, children }) => {
               <Link href="/terms">terms</Link>
               <Link href="/privacy">privacy</Link>
             </div>
-            <div>a Mark Zuckerberg production </div>
-            <div>Facebook © 2005</div>
+            <div>a jakeisnt production </div>
+            <div>isntweb © 2005</div>
           </footer>
         </div>
       </div>
