@@ -35,14 +35,21 @@
 }
 
 .cutout {
+    $cc: 30;
     grid-row: top;
-    background-color: red;
+    background-color: rgba($cc,$cc,$cc,0.5);
     height: 50px;
     width: 28px;
     border-radius: 10px;
     margin: auto;
     margin-bottom: 10px;
     box-shadow: inset 0 4px 5px black;
+    color: grey;
+
+    text-shadow:
+        1px 2px 2px rgba(40, 40, 40, 0.5),
+        1px 3px 3px rgba(40, 40, 40, 0.5),
+        5px 13px 15px $cc;
 }
 
 .leftCutout {
@@ -86,8 +93,8 @@
     grid-row: lcd-start;
     background-color: beige;
     border: 2px solid black;
-    border-top: 4px solid black;
-    border-bottom: 4px solid black;
+    padding-top: 2px;
+    padding-bottom: 2px;
 
     display: grid;
     grid-template-rows:
@@ -98,6 +105,10 @@
         [lcd-left] 80px
         [lcd-main] auto
         [lcd-right] 65px [lcd-right-border];
+
+    box-shadow: inset 0 0 35px 5px rgba(0,0,0,0.25),
+                inset 0 2px 1px 1px rgba(20,20,20,0.9),
+                inset 0 -2px 1px 0 rgba(0,0,0,0.25);
 }
 
 .metronomeModeContainer {
