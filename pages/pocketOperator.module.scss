@@ -160,6 +160,7 @@
     flex-direction: row;
     justify-content: space-between;
     background-color: blue;
+    align-items: center;
 }
 
 .buttons {
@@ -191,10 +192,10 @@
 .knobContainer {
     background-color: grey;
     width: 40px;
+    height: 100%;
     padding-top: 10px;
 }
 
-/* metal radial */
 .knob {
     margin: auto;
     margin-top: auto;
