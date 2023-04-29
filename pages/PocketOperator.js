@@ -4,6 +4,15 @@ const controlButtons = [
   'a', 'b', 'c', 'd', 'e',
 ]
 
+const buttonGrid = [
+  [1, 2, 3, 4],
+  [5, 6, 7, 8],
+  [9, 10, 11, 12],
+  [13, 14, 15, 16]
+]
+
+const beats = 16;
+
 const Knob = ({ name }) => {
   return (
     <div className={classes.knob}>
@@ -21,12 +30,29 @@ const Button = ({ name }) => {
   );
 }
 
-const buttonGrid = [
-  [1, 2, 3, 4],
-  [5, 6, 7, 8],
-  [9, 10, 11, 12],
-  [13, 14, 15, 16]
-]
+const TimeBox = ({}) =>  {
+  return (
+    <div className={classes.timeBox}>
+      <div className={classes.timeNumber}>
+        136
+      </div>
+      <div className={classes.amPM}>
+        PM
+      </div>
+    </div>
+  );
+}
+
+const Beats = () => {
+  return (
+    <div className={classes.beatsContainer}>
+      {Array.from(Array(beats).keys()).map((beat) => (
+        <div className={classes.beat} key={beat}/>
+      ))}
+      <div/>
+    </div>
+  );
+}
 
 const PocketOperator = () => {
   return (
@@ -38,19 +64,13 @@ const PocketOperator = () => {
         </div>
         <div className={classes.rightCutout}></div>
         <div className={classes.lcd}>
-          <div className={classes.timeBox}>
-            <div className={classes.timeNumber}>
-              136
-            </div>
-            <div className={classes.amPM}>
-              PM
-            </div>
-          </div>
+          <TimeBox/>
+          <Beats/>
+
         </div>
         <div className={classes.buttonsTop}>
           {controlButtons.map((name, index) => {
-            const Component = [4, 5].includes(index) ? Knob : Button;
-
+            const Component = [3, 4].includes(index) ? Knob : Button;
             return (
               <Component name={name}/>
             );
