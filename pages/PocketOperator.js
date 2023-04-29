@@ -18,6 +18,8 @@ const buttonGrid = [
 
 const beats = 16;
 
+import Button from './button';
+
 const Knob = ({ name }) => {
   const [rotation, setRotation] = useState(0);
 
@@ -36,14 +38,6 @@ const Knob = ({ name }) => {
           style={{ transform: `rotate(${rotation}deg)` }}
         />
       </div>
-    </div>
-  );
-}
-
-const Button = ({ name }) => {
-  return (
-    <div className={classes.button} >
-      {name}
     </div>
   );
 }
@@ -131,7 +125,7 @@ const PocketOperator = () => {
           {buttonGrid.map((row, i) =>
             <div className={classes.buttonRow}>
               {row.map((cell, i) => (
-                <Button name={cell} key={i}/>
+                <Button label={cell} key={i}/>
               ))}
             </div>
           )}
