@@ -2,6 +2,9 @@ import { useState, useEffect } from 'react';
 
 import classes from './pocketOperator.module.scss'
 
+// awesome buttons and rubber texture;
+// https://codepen.io/soulwire/pen/neJZgM
+
 const controlButtons = [
   'a', 'b', 'c', 'd', 'e',
 ]
@@ -103,7 +106,9 @@ const PocketOperator = () => {
   return (
     <div className={classes.container}>
       <div className={classes.body}>
-        <div className={classes.leftCutout}></div>
+        <div className={classes.leftCutout}>
+          JAM
+        </div>
         <div className={classes.operatorText}>
           pocket operator
         </div>
