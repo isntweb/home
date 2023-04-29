@@ -18,7 +18,7 @@
     0px 0px 2px 1px rgba(0,0,0,0.5), // outer lip
     inset 0px 0px 2px 1px rgba(0,0,0,0.9), // inner lip
     inset 0px 0px 3px 5px rgba(0,0,0,0.8), // inner body
-    inset 0px 2px 3px 0px rgba(255,255,255,0.6),
+    0px 1px 1px 0px rgba(255,255,255,0.35), // shadow on buttons
   ;
   // background-color: rgba($dark,$dark,$dark,1);
   border-radius: 100%;
@@ -50,14 +50,8 @@
     box-shadow:
       0 2px 0 2px rgba(0,0,0,0.5),
       0px -1px 2px -1px rgba(255,255,255,255.5),
-
+      -1px -1px 0 0 rgba(0,0,0,0.8),
     ;
-    // box-shadow:
-    //   0 5px 15px -4px rgba(0,0,0,0.5),
-    //   inset 0 -3px 4px -1px rgba(0,0,0,0.2),
-    //   inset 0 3px 4px -1px rgba(0,0,0,0.2),
-    //   inset 0 0 5px 1px rgba(255,255,255,0.8),
-    //   inset 0 20px 30px 0 rgba(255,255,255,0.2);
 
     border-radius: $radius;
     position: absolute;
@@ -103,11 +97,12 @@
   top: 0;
   &:active {
     ~ .button {
-      box-shadow:
-        inset 0 15px 25px -4px rgba(0,0,0,0.4),
-        inset 0 -8px 30px 1px rgba(255,255,255,0.9),
-        0 8px 25px 0 rgba(0,0,0,0.4),
-        inset 0 0 10px 1px rgba(255,255,255,0.6);
+    box-shadow:
+      0 2px 1px 4px rgba(0,0,0,0.6),
+      0px -1px 2px 1px rgba(255,255,255,0.4),
+      inset -1px -2px 2px 1px rgba(0,0,0,0.4),
+      inset 0 0 2px 5px rgba(0,0,0,0.1),
+    ;
     }
   }
 }
@@ -119,12 +114,12 @@
 
   &:checked {
     ~ .button {
-      box-shadow:
-        0 15px 25px -4px rgba(0,0,0,0.4),
-        inset 0 -8px 25px -1px rgba(255,255,255,0.9),
-        0 -10px 15px -1px rgba(255,255,255,0.6),
-        inset 0 8px 20px 0 rgba(0,0,0,0.2),
-        inset 0 0 5px 1px rgba(255,255,255,0.6);
+      // box-shadow:
+      //   0 15px 25px -4px rgba(0,0,0,0.4),
+      //   inset 0 -8px 25px -1px rgba(255,255,255,0.9),
+      //   0 -10px 15px -1px rgba(255,255,255,0.6),
+      //   inset 0 8px 20px 0 rgba(0,0,0,0.2),
+      //   inset 0 0 5px 1px rgba(255,255,255,0.6);
     }
     ~ .label {
       font-size: 40px;
