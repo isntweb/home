@@ -18,17 +18,25 @@ const buttonGrid = [
 
 const beats = 16;
 
-import Button from './button';
-
-const Knob = ({ name }) => {
-  const [rotation, setRotation] = useState(0);
+const useAnimate = ({ max, frequency } = {max: 360, frequency: 1000}) => {
+  const [val, setVal] = useState(0);
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setRotation(rotation => (rotation + 1) % 360);
-    }, 10);
+      setVal(rotation => (rotation + 1) % max);
+    }, frequency);
     return () => clearInterval(interval);
-  }, []);
+  }, [max]);
+
+  return val;
+}
+
+import Button from './button';
+
+const Knob = ({ name }) => {
+  const rotation = useAnimate(
+    { max: 360, frequency: 10 }
+  );
 
   return (
     <div className={classes.knobContainer}>
