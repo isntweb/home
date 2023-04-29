@@ -91,6 +91,28 @@
         [lcd-right] 65px [lcd-right-border];
 }
 
+.metronomeModeContainer {
+    grid-row: lcd-top;
+    grid-column: lcd-left;
+}
+
+.modes {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    font-size: 10px;
+}
+
+.mode {
+    color: grey;
+    padding: 0 2px;
+}
+
+.selectedMode {
+    @extend .mode;
+    color: black;
+}
+
 .beatsContainer {
     grid-row: lcd-bottom;
     grid-column:  lcd-left / lcd-right-border;
@@ -164,4 +186,32 @@
     border: 3px solid grey;
     color: white;
     text-align: center;
+}
+
+.knobContainer {
+    background-color: grey;
+    width: 40px;
+    padding-top: 10px;
+}
+
+/* metal radial */
+.knob {
+    margin: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    background-color: green;
+    border: 3px solid black;
+}
+
+.knobOval {
+    width: 20px;
+    height: 6px;
+    border-radius: 20px;
+    background-color: black;
+    margin: auto;
+    padding: auto;
+    margin-top: 9px;
 }

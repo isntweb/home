@@ -1,3 +1,5 @@
+import { useState, useEffect } from 'react';
+
 import classes from './pocketOperator.module.scss'
 
 const controlButtons = [
@@ -14,10 +16,23 @@ const buttonGrid = [
 const beats = 16;
 
 const Knob = ({ name }) => {
+  const [rotation, setRotation] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setRotation(rotation => (rotation + 1) % 360);
+    }, 10);
+    return () => clearInterval(interval);
+  }, []);
+
   return (
-    <div className={classes.knob}>
-      <div className={classes.knobName}>{name}</div>
-      <div className={classes.knobValue}>0</div>
+    <div className={classes.knobContainer}>
+      <div className={classes.knob}>
+        <div
+          className={classes.knobOval}
+          style={{ transform: `rotate(${rotation}deg)` }}
+        />
+      </div>
     </div>
   );
 }
@@ -30,14 +45,28 @@ const Button = ({ name }) => {
   );
 }
 
-const TimeBox = ({}) =>  {
+const TimeBox = () => {
+  const [time, setTime] = useState('00:00');
+  const [amPM, setAmPM] = useState('AM');
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      const date = new Date();
+      const minutes = date.getHours();
+      const seconds = date.getMinutes();
+      setTime(`${minutes}${seconds}`);
+      setAmPM(date.getHours() > 12 ? 'PM' : 'AM');
+    }, 1000);
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <div className={classes.timeBox}>
       <div className={classes.timeNumber}>
-        136
+        {time}
       </div>
       <div className={classes.amPM}>
-        PM
+        {amPM}
       </div>
     </div>
   );
@@ -54,6 +83,22 @@ const Beats = () => {
   );
 }
 
+const MetronomeAndMode = () => {
+  const modes = ['HIP-HOP', 'DISCO', 'TECHNO'];
+  const selectedModeIdx = 2;
+  return (
+    <div className={classes.metronomeModeContainer}>
+      <div className={classes.modes}>
+        {modes.map((mode, idx) => (
+          <div className={idx === selectedModeIdx ? classes.selectedMode : classes.mode}>
+            {mode}
+          </div>
+        ))}
+      </div>
+    </div>
+  )
+}
+
 const PocketOperator = () => {
   return (
     <div className={classes.container}>
@@ -64,6 +109,7 @@ const PocketOperator = () => {
         </div>
         <div className={classes.rightCutout}></div>
         <div className={classes.lcd}>
+          <MetronomeAndMode/>
           <TimeBox/>
           <Beats/>
 
