@@ -1,5 +1,11 @@
 import { useState, useEffect } from 'react';
 
+import Button from './TEButton';
+import Knob from './TEKnob';
+import SoundTumbler from './SoundTumbler';
+
+import { useAnimate } from './useAnimate';
+
 import classes from './pocketOperator.module.scss'
 
 // awesome buttons and rubber texture;
@@ -17,38 +23,6 @@ const buttonGrid = [
 ]
 
 const beats = 16;
-
-const useAnimate = ({ max, frequency } = {max: 360, frequency: 1000}) => {
-  const [val, setVal] = useState(0);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setVal(rotation => (rotation + 1) % max);
-    }, frequency);
-    return () => clearInterval(interval);
-  }, [max]);
-
-  return val;
-}
-
-import Button from './button';
-
-const Knob = ({ name }) => {
-  const rotation = useAnimate(
-    { max: 360, frequency: 10 }
-  );
-
-  return (
-    <div className={classes.knobContainer}>
-      <div className={classes.knob}>
-        <div
-          className={classes.knobOval}
-          style={{ transform: `rotate(${rotation}deg)` }}
-        />
-      </div>
-    </div>
-  );
-}
 
 const TimeBox = () => {
   const [time, setTime] = useState('00:00');
@@ -90,7 +64,8 @@ const Beats = () => {
 
 const MetronomeAndMode = () => {
   const modes = ['HIP-HOP', 'DISCO', 'TECHNO'];
-  const selectedModeIdx = 2;
+  const selectedModeIdx = useAnimate({ max: modes.length, frequency: 1000 });
+
   return (
     <div className={classes.metronomeModeContainer}>
       <div className={classes.modes}>
@@ -119,7 +94,10 @@ const PocketOperator = () => {
           <MetronomeAndMode/>
           <TimeBox/>
           <Beats/>
-
+          <div className={classes.soundTumblerLineBox}>
+            <SoundTumbler label="A"/>
+            <SoundTumbler label="B"/>
+          </div>
         </div>
         <div className={classes.buttonsTop}>
           {controlButtons.map((name, index) => {

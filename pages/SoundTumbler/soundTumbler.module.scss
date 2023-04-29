@@ -1,0 +1,44 @@
+.soundTumbler {
+    grid-row: lcd-main;
+    grid-column: lcd-right;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.soundTumblerLabel {
+    font-size: 14px;
+}
+
+.soundTumblerEnd {
+    width: 18px;
+    height: 8px;
+    border-radius: 1px;
+    border: 1px solid black;
+    background-color: black;
+}
+
+.soundTumblerTop {
+    @extend .soundTumblerEnd;
+    transform: perspective(10px) rotateX(-24deg);
+}
+
+.soundTumblerBottom {
+    @extend .soundTumblerEnd;
+    transform: perspective(10px) rotateX(24deg);
+}
+
+.soundTumblerLine {
+    height: 2px;
+    width: 14px;
+    margin: 2px auto;
+    opacity: 0.5;
+    background: black;
+}
+
+.soundTumblerLineLit {
+    @extend .soundTumblerLine;
+    opacity: 1;
+    background: black;
+}
