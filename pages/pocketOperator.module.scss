@@ -31,6 +31,32 @@
     font-size: 20px;
 }
 
+.cutout {
+    grid-row: top;
+    background-color: red;
+    height: 50px;
+    width: 28px;
+    border-radius: 10px;
+    margin: auto;
+    margin-bottom: 10px;
+}
+
+.leftCutout {
+    @extend .cutout;
+    grid-column: left-border;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    margin-left: 0;
+}
+
+.rightCutout {
+    @extend .cutout;
+    grid-column: right-main;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    margin-right: 0;
+}
+
 .operatorText {
     grid-column: left-main;
     grid-row: top;
@@ -43,14 +69,26 @@
 .lcd {
     grid-column: left-main;
     grid-row: lcd-start;
-    background-color: white;
+    background-color: beige;
+    border: 2px solid black;
+    border-top: 4px solid black;
+    border-bottom: 4px solid black;
+}
+
+.buttonsTop {
+    grid-column: left-main;
+    grid-row: top-buttons-start;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: blue;
 }
 
 .buttons {
     grid-column: left-main;
     grid-row: button-start;
-    background-color: white;
     display: flex;
+    border: 1px solid red;
     flex-direction: column;
 }
 
@@ -64,10 +102,10 @@
 
 .button {
     border-radius: 100%;
-    width: 30px;
-    height: 30px;
+    width: 40px;
+    height: 40px;
     background-color: black;
-    border: 2px solid grey;
+    border: 3px solid grey;
     color: white;
     text-align: center;
 }
