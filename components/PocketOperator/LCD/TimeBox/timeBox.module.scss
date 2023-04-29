@@ -1,0 +1,25 @@
+.timeBox {
+    grid-row: lcd-top;
+    grid-column: lcd-right;
+    display: flex;
+    flex-direction: row;
+    align-items: bottom;
+    justify-content: space-between;
+}
+
+.timeNumber {
+    opacity: 0.75;
+    text-align: left;
+}
+
+.amPM {
+    background-color: grey;
+    padding: 1px 4px;
+    height: 10px;
+    font-size: 6px;
+    margin: auto;
+    margin-bottom: 6px;
+    margin-right: 4px;
+    opacity: 0.75;
+    overflow: hidden;
+}

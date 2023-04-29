@@ -1,6 +1,6 @@
 import classes from './soundTumbler.module.scss';
 
-import { useAnimate } from '../useAnimate';
+import { useAnimate } from '../../../../hooks/useAnimate';
 
 const SoundTumbler = ({ label }) => {
   const numLines = 8;

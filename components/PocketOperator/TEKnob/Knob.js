@@ -1,4 +1,4 @@
-import { useAnimate } from '../useAnimate';
+import { useAnimate } from '../../../hooks/useAnimate';
 import classes from './knob.module.scss';
 
 const Knob = ({ name }) => {
