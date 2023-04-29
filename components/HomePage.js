@@ -7,11 +7,10 @@ const HomePage = ({ children }) => {
     <div className={styles.container}>
       <Head>
         <title>isnt.online</title>
-        <meta name="description" content="isnt.online is a creative studio... blah blah blah." />
+        <meta name="description" content="isnt.online is a creative studio." />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className={styles.siteWindowContainer}>
-
           {children}
       </div>
     </div>
