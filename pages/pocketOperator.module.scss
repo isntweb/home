@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&display=swap');
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #232b2b;
+    border-color: grey;
+    border-radius: 30px;
+    width: 400px;
+    height: 800px;
+    display: grid;
+    grid-template-columns:
+        [left-border] 50px
+        [left-main] 300px
+        [right-main] 50px
+        [right-border];
+    grid-template-rows:
+        [top] 120px
+        [lcd-start] 120px
+        [lcd-end] 50px
+        [top-buttons-start] 50px
+        [top-buttons-end] 50px
+        [button-start] auto
+        [button-end] 50px
+        [bottom];
+    font-size: 20px;
+}
+
+.operatorText {
+    grid-column: left-main;
+    grid-row: top;
+    color: white;
+    margin-top: auto;
+    margin-bottom: 10px;
+    margin-left: 2px;
+}
+
+.lcd {
+    grid-column: left-main;
+    grid-row: lcd-start;
+    background-color: white;
+}
+
+.buttons {
+    grid-column: left-main;
+    grid-row: button-start;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+.buttonRow {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100%;
+}
+
+.button {
+    border-radius: 100%;
+    width: 30px;
+    height: 30px;
+    background-color: black;
+    border: 2px solid grey;
+    color: white;
+    text-align: center;
+}
