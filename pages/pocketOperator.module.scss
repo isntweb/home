@@ -79,6 +79,35 @@
     border: 2px solid black;
     border-top: 4px solid black;
     border-bottom: 4px solid black;
+
+    display: grid;
+    grid-template-rows:
+        [lcd-top] 28px
+        [lcd-main] auto
+        [lcd-bottom] 18px;
+    grid-template-columns:
+        [lcd-left] 80px
+        [lcd-main] auto
+        [lcd-right] 65px;
+}
+
+.timeBox {
+    grid-row: lcd-top;
+    grid-column: lcd-right;
+    display: flex;
+    flex-direction: row;
+    align-items: bottom;
+    justify-content: space-between;
+}
+
+.amPM {
+    background-color: grey;
+    padding: 1px 4px;
+    height: 20px;
+    font-size: 10px;
+    margin-top: auto;
+    margin-bottom: 2px;
+    margin-right: 2px;
 }
 
 .buttonsTop {

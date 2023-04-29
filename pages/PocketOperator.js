@@ -16,7 +16,7 @@ const Knob = ({ name }) => {
 const Button = ({ name }) => {
   return (
     <div className={classes.button} >
-        {name}
+      {name}
     </div>
   );
 }
@@ -38,6 +38,14 @@ const PocketOperator = () => {
         </div>
         <div className={classes.rightCutout}></div>
         <div className={classes.lcd}>
+          <div className={classes.timeBox}>
+            <div className={classes.timeNumber}>
+              136
+            </div>
+            <div className={classes.amPM}>
+              PM
+            </div>
+          </div>
         </div>
         <div className={classes.buttonsTop}>
           {controlButtons.map((name, index) => {
