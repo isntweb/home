@@ -136,6 +136,9 @@ const PocketOperator = () => {
             </div>
           )}
         </div>
+        <div className={classes.bottomCutoutContainer}>
+          <div className={classes.bottomCutout}/>
+        </div>
       </div>
     </div>
   );

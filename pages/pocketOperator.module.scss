@@ -236,3 +236,26 @@
     padding: auto;
     margin-top: 9px;
 }
+
+.bottomCutoutContainer {
+    grid-row: button-end;
+    grid-column: left-main;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 10px;
+}
+
+.bottomCutout {
+    width: 35px;
+    height: 18px;
+    border-radius: 20px;
+    background-color: black;
+    margin: auto;
+    padding: auto;
+    margin-top: 6px;
+    box-shadow: 0 0 35px 5px rgba(0,0,0,0.25),
+                0 2px 1px 1px rgba(20,20,20,0.9),
+                0 -2px 1px 0 rgba(0,0,0,0.25);
+}
