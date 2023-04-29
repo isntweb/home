@@ -8,6 +8,8 @@ const Knob = ({ name }) => {
 
   return (
     <div className={classes.knobContainer}>
+      <div className={classes.knobTopFastener}/>
+      <div className={classes.knobBottomFastener}/>
       <div className={classes.knob}>
         <div
           className={classes.knobOval}
