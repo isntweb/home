@@ -254,3 +254,21 @@
     flex-direction: row;
     justify-content: space-around;
 }
+
+.patternIndicator {
+    grid-row: lcd-main;
+    grid-column: lcd-left;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 60px;
+}
+
+.indicator {
+    width: 20px;
+    height: 8px;
+    border-bottom: 2px solid black;
+}

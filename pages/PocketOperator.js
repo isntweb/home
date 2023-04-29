@@ -79,6 +79,19 @@ const MetronomeAndMode = () => {
   )
 }
 
+/* Indicates what pattern the user has selected */
+const PatternIndicator = () => {
+  const numIndicators = 8;
+
+  return (
+    <div className={classes.patternIndicator}>
+      {Array.from(Array(numIndicators).keys()).map((indicator) => (
+        <div className={classes.indicator} key={indicator}/>
+      ))}
+    </div>
+  )
+}
+
 const PocketOperator = () => {
   return (
     <div className={classes.container}>
@@ -94,6 +107,7 @@ const PocketOperator = () => {
           <MetronomeAndMode/>
           <TimeBox/>
           <Beats/>
+          <PatternIndicator />
           <div className={classes.soundTumblerLineBox}>
             <SoundTumbler label="A"/>
             <SoundTumbler label="B"/>
