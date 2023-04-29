@@ -22,9 +22,9 @@
     height: 750px;
     display: grid;
     grid-template-columns:
-        [left-border] 50px
-        [left-main] 300px
-        [right-main] 50px
+        [left-border] 40px
+        [left-main] auto
+        [right-main] 40px
         [right-border];
     grid-template-rows:
         [top] 130px
