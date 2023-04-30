@@ -1,48 +1,49 @@
+import classes from './nintendoSwitch.module.scss';
+import { cx } from '../../utils';
 
 const NintendoSwitch = () => {
   return (
-    <div class="switch">
-          <div class="body">
-            <div class="volume"></div>
-            <div class="screen">
-              <div class="logo">
-                <div class="icon">
-                  <div class="icon-part left"></div>
-                  <div class="icon-part right"></div>
-                </div>
-                <h1><span>Nintendo</span>Switch</h1>
-              </div>
+    <div className={classes.switch}>
+      <div className={classes.body}>
+        <div className={classes.volume}/>
+        <div className={classes.screen}>
+          <div className={classes.logo}>
+            <div className={classes.icon}>
+              <div className={cx(classes.iconPart, classes.left)}/>
+              <div className={cx(classes.iconPart, classes.right)}/>
             </div>
-          </div>
-
-          <div class="joy-con left">
-            <div class="button-group">
-              <div class="button arrow up"></div>
-              <div class="button arrow right"></div>
-              <div class="button arrow down"></div>
-              <div class="button arrow left"></div>
-            </div>
-
-            <div class="stick"></div>
-            <div class="select"></div>
-            <div class="capture"></div>
-            <div class="shoulder l"></div>
-          </div>
-
-          <div class="joy-con right">
-            <div class="button-group">
-              <div class="button letter" data-letter="X"></div>
-              <div class="button letter" data-letter="A"></div>
-              <div class="button letter" data-letter="B"></div>
-              <div class="button letter" data-letter="Y"></div>
-            </div>
-
-            <div class="stick"></div>
-            <div class="start"></div>
-            <div class="home"></div>
-            <div class="shoulder r"></div>
+            <h1><span>Nintendo</span>Switch</h1>
           </div>
         </div>
+      </div>
+
+      <div className={cx(classes.joycon, classes.left)}>
+        <div className={classes.buttonGroup}>
+          <div className={cx(classes.button, classes.arrow, classes.up)} />
+          <div className={cx(classes.button, classes.arrow, classes.right)} />
+          <div className={cx(classes.button, classes.arrow, classes.down)} />
+          <div className={cx(classes.button, classes.arrow, classes.left)} />
+        </div>
+
+        <div className={classes.stick} />
+        <div className={classes.select} />
+        <div className={classes.capture} />
+        <div className={cx(classes.shoulder, classes.l)} />
+      </div>
+
+      <div className={cx(classes.joycon, classes.right)}>
+        <div className={classes.buttonGroup}>
+          <div className={cx(classes.button, classes.letter)} data-letter="X" />
+          <div className={cx(classes.button, classes.letter)} data-letter="A" />
+          <div className={cx(classes.button, classes.letter)} data-letter="B" />
+          <div className={cx(classes.button, classes.letter)} data-letter="Y" />
+        </div>
+        <div className={classes.stick} />
+        <div className={classes.start} />
+        <div className={classes.home} />
+        <div className={cx(classes.shoulder, classes.r)} />
+      </div>
+    </div>
   );
 }
 

@@ -1,27 +1,10 @@
-html {
-  box-sizing: border-box;
-}
-
-*,
-*::before,
-*::after {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
-
-body {
-  display: flex;
-  height: 100vh;
-  font-size: 2em;
-  font-family: "Open Sans", sans-serif;
-  background-color: #eee;
-}
-
 .switch {
   position: relative;
   z-index: 1;
   margin: auto;
+  font-size: 2em;
+  font-family: "Open Sans", sans-serif;
+  background-color: #eee;
 }
 
 .body {
@@ -153,7 +136,7 @@ body {
   animation: logo-icon 2s linear infinite;
 }
 
-.icon-part {
+.iconPart {
   position: relative;
   height: 100%;
   display: inline-block;
@@ -210,7 +193,7 @@ body {
   100% { transform: translateY(0); }
 }
 
-.joy-con {
+.joycon {
   position: absolute;
   top: 0;
   width: 3.8125em;
@@ -220,7 +203,7 @@ body {
   border: 0;
 }
 
-.joy-con.left {
+.joycon.left {
   right: calc(100% + 0.03125em);
   border-radius: 2.5em 0.25em 0.125em 2.5em;
   box-shadow:
@@ -230,7 +213,7 @@ body {
     0.40625em 0.25em 0 -0.375em #222;
 }
 
-.joy-con.left::before {
+.joycon.left::before {
   content: '';
   position: absolute;
   top: 0.125em;
@@ -243,7 +226,7 @@ body {
   filter: blur(0.0625em);
 }
 
-.joy-con.right {
+.joycon.right {
   left: calc(100% + 0.03125em);
   border-radius: 0.25em 2.5em 2.5em 0.125em;
   box-shadow:
@@ -253,7 +236,7 @@ body {
     -0.40625em 0.25em 0 -0.375em #222;
 }
 
-.joy-con.right::before {
+.joycon.right::before {
   content: '';
   position: absolute;
   top: 0.125em;
@@ -266,7 +249,7 @@ body {
   filter: blur(0.0625em);
 }
 
-.button-group {
+.buttonGroup {
   position: absolute;
   left: 50%;
   width: 45%;
@@ -274,12 +257,12 @@ body {
   transform: translateX(-50%);
 }
 
-.left .button-group {
+.left .buttonGroup {
   top: 5.375em;
   margin-left: 2.5%;
 }
 
-.right .button-group {
+.right .buttonGroup {
   top: 2.125em;
   margin-left: -2.5%;
 }

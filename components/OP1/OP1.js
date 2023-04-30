@@ -1,8 +1,6 @@
 import classes from './op1.module.scss';
 import Keyboard from './Keyboard';
-
-const cx = (...args) => args.join(' ');
-
+import { cx } from '../../utils';
 
 const BCon = ({ children }) => (
   <div className={classes.buttonBlock}>
