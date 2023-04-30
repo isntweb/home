@@ -20,6 +20,23 @@ const ImageButton = ({ width, alt, src } = { width: "24", alt: "alt" }) => (
   </BCon>
 );
 
+const TwoElemButton = ({ e1, e2 }) => {
+  return (
+    <BCon>
+      <div className={classes.buttonsTwoElements}>
+        <p className={classes.normal18px}>
+          {e1}
+        </p>
+        {typeof e2 === 'string' ? (
+          <p className={classes.condensed12px}>
+            {e2}
+          </p>
+        ) : e2}
+      </div>
+    </BCon>
+  );
+};
+
 const BigKnobs = () => {
   const knobColors = ["Blue", "Green", "White", "Orange"];
   return (
@@ -86,7 +103,6 @@ const RightPanel = () => (
   </div>
 )
 
-// numberToArray
 const numToArray = (n) => [...Array(n)];
 
 const Keyboard = () => {
@@ -97,9 +113,11 @@ const Keyboard = () => {
           <div className={classes.blackKeyBlockLong}>
             <div className={classes.blackKeyRight}/>
           </div>
-          <div className={classes.blackKeyBlockShort}>
-            <div className={classes.blackKey} />
-          </div>
+          {i % 2 === 0 && (
+            <div className={classes.blackKeyBlockShort}>
+              <div className={classes.blackKey} />
+            </div>
+          )}
           <div className={classes.blackKeyBlockLong}>
             <div className={classes.blackKeyLeft} />
           </div>
@@ -116,9 +134,11 @@ const Keyboard = () => {
           <div className={classes.whiteKeyBlock}>
             <div className={classes.whiteKey} />
           </div>
-          <div className={classes.whiteKeyBlock}>
-            <div className={classes.whiteKey} />
-          </div>
+          {i % 2 === 0 && (
+            <div className={classes.whiteKeyBlock}>
+              <div className={classes.whiteKey} />
+            </div>
+          )}
         </div>
       ))}
     </div>
@@ -157,6 +177,11 @@ const OP1 = () => {
               <BigKnobs />
 
               <div className={classes.topRight}>
+                <ImageButton
+                  width="36"
+                  alt="Microphone button icon"
+                  src="https://pizzabreakfast.co/project-assets/web-op-1/mic-icon.svg"
+                />
                 <BCon>
                   <div>
                     <img
@@ -260,66 +285,56 @@ const OP1 = () => {
                       <p className={classes.light32px}>{i + 1}</p>
                     </BCon>
                   ))}
-                  <BCon>
-                    <div className={classes.buttonsTwoElements}>
-                      <p className={classes.normal18px}>1</p>
+                  <TwoElemButton
+                    e1="1"
+                    e2={
                       <p className={cx(classes.condensed12px, classes.green)}>IN</p>
-                    </div>
-                  </BCon>
-                  <BCon>
-                    <div className={classes.buttonsTwoElements}>
-                      <p className={classes.normal18px}>2</p>
+                    }
+                  />
+                  <TwoElemButton
+                    e1="2"
+                    e2={
                       <p className={cx(classes.condensed12px, classes.green)}>OUT</p>
-                    </div>
-                  </BCon>
-                  <BCon>
-                    <div className={classes.buttonsTwoElements}>
-                      <p className={classes.normal18px}>3</p>
+                    }
+                  />
+                  <TwoElemButton
+                    e1="3"
+                    e2={
                       <img
                         width="24"
                         alt="Loop button icon"
                         src="https://pizzabreakfast.co/project-assets/web-op-1/loop-icon.svg"
                       />
-                    </div>
-                  </BCon>
-                  <BCon>
-                    <div className={classes.buttonsTwoElements}>
-                      <p className={classes.normal18px}>4</p>
+                    }
+                  />
+                  <TwoElemButton
+                    e1="4"
+                    e2={
                       <img
                         width="24"
                         alt="Break button icon"
                         src="https://pizzabreakfast.co/project-assets/web-op-1/break-icon.svg"
                       />
-                    </div>
-                  </BCon>
-                  <BCon>
-                    <div className={classes.buttonsTwoElements}>
-                      <p className={classes.normal18px}>5</p>
+                    }
+                  />
+                  <TwoElemButton
+                    e1="5"
+                    e2={
                       <p className={cx(classes.normal12px, classes.orange)}>Я</p>
-                    </div>
-                  </BCon>
-                  <BCon>
-                    <div className={classes.buttonsTwoElements}>
-                      <p className={classes.normal18px}>6</p>
+                    }
+                  />
+                  <TwoElemButton
+                    e1="6"
+                    e2={
                       <img
                         width="24"
                         alt="Chop button icon"
                         src="https://pizzabreakfast.co/project-assets/web-op-1/chop-icon.svg"
                       />
-                    </div>
-                  </BCon>
-                  <BCon>
-                    <div className={classes.buttonsTwoElements}>
-                      <p className={classes.normal18px}>7</p>
-                      <p className={classes.condensed12px}>M1</p>
-                    </div>
-                  </BCon>
-                  <BCon>
-                    <div className={classes.buttonsTwoElements}>
-                      <p className={classes.normal18px}>8</p>
-                      <p className={classes.condensed12px}>M2</p>
-                    </div>
-                  </BCon>
+                    }
+                  />
+                  <TwoElemButton e1="7" e2="M1" />
+                  <TwoElemButton e1="8" e2="M2" />
                   <ImageButton
                     width="36"
                     alt="Sequencer button icon"
@@ -330,8 +345,8 @@ const OP1 = () => {
               </div>
             </div>
           </div>
-          <RightPanel />
         </div>
+        <RightPanel />
       </div>
     </div>
   );
