@@ -1,0 +1,104 @@
+.keyboard {
+  display: grid;
+  grid-template-columns: 268px 200px 268px 200px;
+  grid-template-rows: 64px 132px;
+  grid-column-gap: 4px;
+  grid-row-gap: 4px;
+}
+
+.blackKeyGroup {
+  display: flex;
+  justify-content: space-between;
+  align-content: space-between;
+  // grid-row: 1;
+}
+
+.whiteKeyGroup {
+  display: flex;
+  justify-content: space-between;
+  grid-row: 2;
+}
+
+.blackKeyBlockShort {
+  width: 64px;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #dfe0e9;
+  border-radius: 4px;
+}
+
+.blackKeyBlockLong {
+  width: 98px;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #dfe0e9;
+  border-radius: 4px;
+}
+
+.blackKey {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+
+  background: #101010;
+  border: 2px solid #e5e4eb;
+  /* rubber-button */
+  box-shadow: 6px 6px 16px #9fa6b3, -6px -6px 16px #e8ebf3;
+}
+
+.blackKeyLeft {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+
+  background: #101010;
+  border: 2px solid #e5e4eb;
+  /* rubber-button */
+  box-shadow: 6px 6px 16px #9fa6b3, -6px -6px 16px #e8ebf3;
+  transform: translateX(-16px);
+}
+
+.blackKeyRight {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+
+  background: #101010;
+  border: 2px solid #e5e4eb;
+  /* rubber-button */
+  box-shadow: 6px 6px 16px #9fa6b3, -6px -6px 16px #e8ebf3;
+  transform: translateX(16px);
+}
+
+.whiteKeyBlock {
+  position: relative;
+  width: 64px;
+  height: 132px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #d1d7e0;
+  border-radius: 4px;
+}
+
+.whiteKey {
+  position: relative;
+  width: 42px;
+  height: 110px;
+  background: #d8dbe3;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-sizing: border-box;
+
+  /* rubber-button */
+  box-shadow: 6px 6px 16px #9fa6b3, -6px -6px 16px #e8ebf3;
+  border-radius: 50px;
+}

@@ -1,6 +1,9 @@
 import classes from './op1.module.scss';
 
+import Keyboard from './Keyboard';
+
 const cx = (...args) => args.join(' ');
+
 
 const BCon = ({ children }) => (
   <div className={classes.buttonBlock}>
@@ -102,48 +105,6 @@ const RightPanel = () => (
     </div>
   </div>
 )
-
-const numToArray = (n) => [...Array(n)];
-
-const Keyboard = () => {
-  return (
-    <div className={classes.keyboard}>
-      {numToArray(4).map(( i ) => (
-        <div className={classes[`blackKeys${i + 1}`]}>
-          <div className={classes.blackKeyBlockLong}>
-            <div className={classes.blackKeyRight}/>
-          </div>
-          {i % 2 === 0 && (
-            <div className={classes.blackKeyBlockShort}>
-              <div className={classes.blackKey} />
-            </div>
-          )}
-          <div className={classes.blackKeyBlockLong}>
-            <div className={classes.blackKeyLeft} />
-          </div>
-        </div>
-      ))}
-      {numToArray(4).map(( i ) => (
-        <div className={classes[`whiteKeys${i + 1}`]}>
-          <div className={classes.whiteKeyBlock}>
-            <div className={classes.whiteKey}/>
-          </div>
-          <div className={classes.whiteKeyBlock}>
-            <div className={classes.whiteKey}/>
-          </div>
-          <div className={classes.whiteKeyBlock}>
-            <div className={classes.whiteKey} />
-          </div>
-          {i % 2 === 0 && (
-            <div className={classes.whiteKeyBlock}>
-              <div className={classes.whiteKey} />
-            </div>
-          )}
-        </div>
-      ))}
-    </div>
-  );
-}
 
 const OP1 = () => {
   return (
