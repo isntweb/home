@@ -2,16 +2,22 @@ import classes from './op1.module.scss';
 
 const cx = (...args) => args.join(' ');
 
-const ImageButton = ({ width, alt, src } = { width: "24", alt: "alt" }) => (
+const BCon = ({ children }) => (
   <div className={classes.buttonBlock}>
     <div className={classes.button}>
-      <img
-        width={width}
-        alt={alt}
-        src={src}
-      />
+      {children}
     </div>
   </div>
+);
+
+const ImageButton = ({ width, alt, src } = { width: "24", alt: "alt" }) => (
+  <BCon>
+    <img
+      width={width}
+      alt={alt}
+      src={src}
+    />
+  </BCon>
 );
 
 const BigKnobs = () => {
@@ -64,13 +70,13 @@ const Screen = () => (
 
 const RightPanel = () => (
   <div className={classes.rightSidePart}>
-    <div class="microphone-vu-op1">
+    <div className={classes.microphoneVuOp1}>
       <img
         width="16"
         alt="Inbuilt microphone image"
         src="https://pizzabreakfast.co/project-assets/web-op-1/microphone.svg"
       />
-      <div class="vu-meter">
+      <div className={classes.vuMeter}>
         {[...Array(5)].map((_, index) => (
           <div className={classes.oval4px} />
         ))}
@@ -80,10 +86,13 @@ const RightPanel = () => (
   </div>
 )
 
+// numberToArray
+const numToArray = (n) => [...Array(n)];
+
 const Keyboard = () => {
   return (
     <div className={classes.keyboard}>
-      {Array.from(4).map(( i ) => (
+      {numToArray(4).map(( i ) => (
         <div className={classes[`blackKeys${i + 1}`]}>
           <div className={classes.blackKeyBlockLong}>
             <div className={classes.blackKeyRight}/>
@@ -96,7 +105,7 @@ const Keyboard = () => {
           </div>
         </div>
       ))}
-      {Array.from(8).map(( i ) => (
+      {numToArray(4).map(( i ) => (
         <div className={classes[`whiteKeys${i + 1}`]}>
           <div className={classes.whiteKeyBlock}>
             <div className={classes.whiteKey}/>
@@ -147,23 +156,21 @@ const OP1 = () => {
               <Screen />
               <BigKnobs />
 
-              <div class="top-right">
-                <div class="button-block">
-                  <div class="button">
-                    <div>
-                      <img
-                        width="16"
-                        alt="Album button icon"
-                        src="https://pizzabreakfast.co/project-assets/web-op-1/album-icon.svg"
-                      />
-                      <p class="condensed-10px">COM</p>
-                    </div>
+              <div className={classes.topRight}>
+                <BCon>
+                  <div>
+                    <img
+                      width="16"
+                      alt="Album button icon"
+                      src="https://pizzabreakfast.co/project-assets/web-op-1/album-icon.svg"
+                    />
+                    <p className={classes.condensed10px}>COM</p>
                   </div>
-                </div>
+                </BCon>
               </div>
             </div>
-            <div class="transports-controls-keyboard">
-              <div class="transports">
+            <div className={classes.transportsControlsKeyboard}>
+              <div className={classes.transports}>
                 <ImageButton
                   width="36"
                   alt="Synthesizer button icon"
@@ -179,44 +186,38 @@ const OP1 = () => {
                   alt="Tape button icon"
                   src="https://pizzabreakfast.co/project-assets/web-op-1/tape-icon.svg"
                 />
-                <div class="button-block">
-                  <div class="button">
-                    <div>
-                      <img
-                        width="16"
-                        alt="Lift button icon"
-                        src="https://pizzabreakfast.co/project-assets/web-op-1/lift-icon.svg"
-                      />
-                      <p class="normal-10px">1–4</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="button-block">
-                  <div class="button">
+                <BCon>
+                  <div>
                     <img
                       width="16"
-                      alt="Drop button icon"
-                      src="https://pizzabreakfast.co/project-assets/web-op-1/drop-icon.svg"
+                      alt="Lift button icon"
+                      src="https://pizzabreakfast.co/project-assets/web-op-1/lift-icon.svg"
                     />
+                    <p className={classes.normal10px}>1–4</p>
+                  </div>
+                </BCon>
+                <BCon>
+                  <img
+                    width="16"
+                    alt="Drop button icon"
+                    src="https://pizzabreakfast.co/project-assets/web-op-1/drop-icon.svg"
+                  />
+                  <img
+                    width="16"
+                    alt="Dot icon"
+                    src="https://pizzabreakfast.co/project-assets/web-op-1/dot-icon.svg"
+                  />
+                </BCon>
+                <BCon>
+                  <div>
                     <img
                       width="16"
-                      alt="Dot icon"
-                      src="https://pizzabreakfast.co/project-assets/web-op-1/dot-icon.svg"
+                      alt="Split button icon"
+                      src="https://pizzabreakfast.co/project-assets/web-op-1/split-icon.svg"
                     />
+                    <p className={classes.condensed10px}>JOIN</p>
                   </div>
-                </div>
-                <div class="button-block">
-                  <div class="button">
-                    <div>
-                      <img
-                        width="16"
-                        alt="Split button icon"
-                        src="https://pizzabreakfast.co/project-assets/web-op-1/split-icon.svg"
-                      />
-                      <p class="condensed-10px">JOIN</p>
-                    </div>
-                  </div>
-                </div>
+                </BCon>
                 <ImageButton
                   width="36"
                   alt="Record button icon"
@@ -242,101 +243,83 @@ const OP1 = () => {
                   alt="Forward button icon"
                   src="https://pizzabreakfast.co/project-assets/web-op-1/forward-icon.svg"
                 />
-                <div class="button-block">
-                  <div class="button"><p>Shift</p></div>
-                </div>
+                <BCon>
+                  <p className={classes.p}>Shift</p>
+                </BCon>
               </div>
 
-              <div class="controls-keyboard">
-                <div class="controls">
+              <div className={classes.controlsKeyboard}>
+                <div className={classes.controls}>
                   <ImageButton
                     width="36"
                     alt="Mixer button icon"
                     src="https://pizzabreakfast.co/project-assets/web-op-1/mixer-icon.svg"
                   />
                   {Array.from(Array(4).keys()).map((i) => (
-                    <div class="button-block">
-                      <div class="button">
-                        <p className={light32px}>{i + 1}</p>
-                      </div>
-                    </div>
+                    <BCon>
+                      <p className={classes.light32px}>{i + 1}</p>
+                    </BCon>
                   ))}
-                  <div class="button-block">
-                    <div class="button">
-                      <div class="buttons-two-elements">
-                        <p class="normal-18px">1</p>
-                        <p class="condensed-12px green">IN</p>
-                      </div>
+                  <BCon>
+                    <div className={classes.buttonsTwoElements}>
+                      <p className={classes.normal18px}>1</p>
+                      <p className={cx(classes.condensed12px, classes.green)}>IN</p>
                     </div>
-                  </div>
-                  <div class="button-block">
-                    <div class="button">
-                      <div class="buttons-two-elements">
-                        <p class="normal-18px">2</p>
-                        <p class="condensed-12px green">OUT</p>
-                      </div>
+                  </BCon>
+                  <BCon>
+                    <div className={classes.buttonsTwoElements}>
+                      <p className={classes.normal18px}>2</p>
+                      <p className={cx(classes.condensed12px, classes.green)}>OUT</p>
                     </div>
-                  </div>
-                  <div class="button-block">
-                    <div class="button">
-                      <div class="buttons-two-elements">
-                        <p class="normal-18px">3</p>
-                        <img
-                          width="24"
-                          alt="Loop button icon"
-                          src="https://pizzabreakfast.co/project-assets/web-op-1/loop-icon.svg"
-                        />
-                      </div>
+                  </BCon>
+                  <BCon>
+                    <div className={classes.buttonsTwoElements}>
+                      <p className={classes.normal18px}>3</p>
+                      <img
+                        width="24"
+                        alt="Loop button icon"
+                        src="https://pizzabreakfast.co/project-assets/web-op-1/loop-icon.svg"
+                      />
                     </div>
-                  </div>
-                  <div class="button-block">
-                    <div class="button">
-                      <div class="buttons-two-elements">
-                        <p class="normal-18px">4</p>
-                        <img
-                          width="24"
-                          alt="Break button icon"
-                          src="https://pizzabreakfast.co/project-assets/web-op-1/break-icon.svg"
-                        />
-                      </div>
+                  </BCon>
+                  <BCon>
+                    <div className={classes.buttonsTwoElements}>
+                      <p className={classes.normal18px}>4</p>
+                      <img
+                        width="24"
+                        alt="Break button icon"
+                        src="https://pizzabreakfast.co/project-assets/web-op-1/break-icon.svg"
+                      />
                     </div>
-                  </div>
-                  <div class="button-block">
-                    <div class="button">
-                      <div class="buttons-two-elements">
-                        <p class="normal-18px">5</p>
-                        <p class="normal-12px orange">Я</p>
-                      </div>
+                  </BCon>
+                  <BCon>
+                    <div className={classes.buttonsTwoElements}>
+                      <p className={classes.normal18px}>5</p>
+                      <p className={cx(classes.normal12px, classes.orange)}>Я</p>
                     </div>
-                  </div>
-                  <div class="button-block">
-                    <div class="button">
-                      <div class="buttons-two-elements">
-                        <p class="normal-18px">6</p>
-                        <img
-                          width="24"
-                          alt="Chop button icon"
-                          src="https://pizzabreakfast.co/project-assets/web-op-1/chop-icon.svg"
-                        />
-                      </div>
+                  </BCon>
+                  <BCon>
+                    <div className={classes.buttonsTwoElements}>
+                      <p className={classes.normal18px}>6</p>
+                      <img
+                        width="24"
+                        alt="Chop button icon"
+                        src="https://pizzabreakfast.co/project-assets/web-op-1/chop-icon.svg"
+                      />
                     </div>
-                  </div>
-                  <div class="button-block">
-                    <div class="button">
-                      <div class="buttons-two-elements">
-                        <p class="normal-18px">7</p>
-                        <p class="condensed-12px">M1</p>
-                      </div>
+                  </BCon>
+                  <BCon>
+                    <div className={classes.buttonsTwoElements}>
+                      <p className={classes.normal18px}>7</p>
+                      <p className={classes.condensed12px}>M1</p>
                     </div>
-                  </div>
-                  <div class="button-block">
-                    <div class="button">
-                      <div class="buttons-two-elements">
-                        <p class="normal-18px">8</p>
-                        <p class="condensed-12px">M2</p>
-                      </div>
+                  </BCon>
+                  <BCon>
+                    <div className={classes.buttonsTwoElements}>
+                      <p className={classes.normal18px}>8</p>
+                      <p className={classes.condensed12px}>M2</p>
                     </div>
-                  </div>
+                  </BCon>
                   <ImageButton
                     width="36"
                     alt="Sequencer button icon"
