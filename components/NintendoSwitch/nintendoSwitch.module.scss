@@ -142,20 +142,20 @@
   margin: 0 0.03125em;
 }
 
-.icon-part.left {
+.iconPart.left {
   width: 1.59375em;
   border: 0.25em solid #fff;
   border-radius: 0.8125em 0 0 0.8125em;
 }
 
-.icon-part.right {
+.iconPart.right {
   width: 1.4375em;
   background-color: #fff;
   border-radius: 0 0.8125em 0.8125em 0;
   animation: logo-right 2s linear infinite;
 }
 
-.icon-part::before {
+.iconPart::before {
   content: '';
   position: absolute;
   left: 50%;
@@ -166,12 +166,12 @@
   border-radius: 50%;
 }
 
-.icon-part.left::before {
+.iconPart.left::before {
   top: 0.46875em;
   background-color: #fff;
 }
 
-.icon-part.right::before {
+.iconPart.right::before {
   top: 1.5em;
   background-color: #e60012;
 }
