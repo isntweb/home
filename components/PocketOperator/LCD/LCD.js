@@ -24,13 +24,16 @@ const MetronomeAndMode = () => {
     <div className={classes.metronomeModeContainer}>
       <div className={classes.modes}>
         {modes.map((mode, idx) => (
-          <div className={idx === selectedModeIdx ? classes.selectedMode : classes.mode}>
+          <div
+            className={idx === selectedModeIdx ? classes.selectedMode : classes.mode}
+            key={`metronome-mode-${mode}`}
+          >
             {mode}
           </div>
         ))}
       </div>
     </div>
-  )
+  );
 }
 
 /* Indicates what pattern the user has selected */

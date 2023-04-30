@@ -18,4 +18,4 @@ const useTime = () => {
   return { time, amPM };
 }
 
-export { useTime };
+export default useTime;

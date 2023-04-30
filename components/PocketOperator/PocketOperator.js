@@ -4,7 +4,7 @@ import Button from './TEButton';
 import Knob from './TEKnob';
 import LCD from './LCD';
 
-import { useAnimate } from '../../hooks/useAnimate';
+import { useAnimate } from '../../hooks';
 import classes from './pocketOperator.module.scss'
 
 // awesome buttons and rubber texture;
@@ -38,15 +38,15 @@ const PocketOperator = () => {
           {controlButtons.map((name, index) => {
             const Component = [3, 4].includes(index) ? Knob : Button;
             return (
-              <Component name={name}/>
+              <Component key={name} name={name}/>
             );
           })}
         </div>
         <div className={classes.buttons}>
           {buttonGrid.map((row, i) =>
-            <div className={classes.buttonRow}>
-              {row.map((cell, i) => (
-                <Button label={cell} key={i}/>
+            <div className={classes.buttonRow} key={`button-row-${i}`}>
+              {row.map((cell, j) => (
+                <Button label={cell} key={`button-cell-${i}-${j}`}/>
               ))}
             </div>
           )}

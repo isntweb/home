@@ -13,4 +13,4 @@ const useAnimate = ({ max, frequency } = {max: 360, frequency: 1000}) => {
   return val;
 }
 
-export { useAnimate };
+export default useAnimate;
