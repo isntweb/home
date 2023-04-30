@@ -243,8 +243,8 @@
   border-radius: 3px;
   border: 2px solid #967178;
   transform: rotate(90deg);
-  top: -2px;
-  left: -2px;
+  top: 0px;
+  left: 0px;
 }
 
 .dPad::after {
@@ -292,7 +292,7 @@
 .button {
   position: absolute;
   width: 21px;
-  height: 18px;
+  height: 21px;
   padding-top: 3px;
   border: 1px solid var(--shadow);
   border-radius: 50%;
@@ -310,22 +310,22 @@
 
 #X {
   right: 35px;
-  top: 45px;
+  top: 44px;
 }
 
 #A {
   right: 12px;
-  top: 69px;
+  top: 67px;
 }
 
 #Y {
   right: 59px;
-  top: 69px;
+  top: 67px;
 }
 
 #B {
   right: 35px;
-  top: 92px;
+  top: 90px;
 }
 
 .smallButton {
@@ -350,7 +350,6 @@
   font-size: 7px;
   color: #fff7f9;
   left: 15px;
-  top: 2px;
 }
 
 #select::after {
@@ -359,5 +358,4 @@
   font-size: 7px;
   color: #fff7f9;
   left: 15px;
-  top: 2px;
 }
