@@ -22,9 +22,9 @@ const buttonGrid = [
 ]
 
 
-const PocketOperator = () => {
+const PocketOperator = ({ innerRef }) => {
   return (
-    <div className={classes.container}>
+    <div className={classes.container} ref={innerRef}>
       <div className={classes.body}>
         <div className={classes.leftCutout}>
           JAM

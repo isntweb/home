@@ -42,7 +42,7 @@ const BigKnobs = () => {
   return (
     <div className={classes.knobs}>
       {knobColors.map((color, index) => (
-        <div className={classes.knobBlock}>
+        <div className={classes.knobBlock} key={`knob-${color}`}>
           <div className={classes.outerKnob}>
             <div className={classes[`knob${color}`]}>
               <div className={classes[`imprint${color}`]}/>
@@ -89,13 +89,13 @@ const RightPanel = () => (
   <div className={classes.rightSidePart}>
     <div className={classes.microphoneVuOp1}>
       <div className={classes.micSquare}>
-        {[...Array(4)].map(() => (
-          <div className={classes.oval4px} />
+        {[...Array(4)].map((_, i) => (
+          <div className={classes.oval4px} key={`square-dot-${i}`} />
         ))}
       </div>
       <div className={classes.vuMeter}>
-        {[...Array(5)].map((_, index) => (
-          <div className={classes.oval4px} />
+        {[...Array(5)].map((_, i) => (
+          <div className={classes.oval4px} key={`vertical-dot-${i}`} />
         ))}
       </div>
       <h1 className={classes.op1Label}>OP-1</h1>
@@ -103,9 +103,9 @@ const RightPanel = () => (
   </div>
 )
 
-const OP1 = () => {
+const OP1 = ({ innerRef }) => {
   return (
-    <div className={classes.op1ContainerLayer1}>
+    <div className={classes.op1ContainerLayer1} ref={innerRef}>
       <div className={classes.op1ContainerLayer2}>
         <div className={classes.innerProfile}>
           <div className={classes.darkBackground}>
@@ -238,9 +238,9 @@ const OP1 = () => {
                     alt="Mixer button icon"
                     src="https://pizzabreakfast.co/project-assets/web-op-1/mixer-icon.svg"
                   />
-                  {Array.from(Array(4).keys()).map((i) => (
+                  {Array.from(Array(4).keys()).map((_, i) => (
                     <BCon>
-                      <p className={classes.light32px}>{i + 1}</p>
+                      <p className={classes.light32px} key={`numbered-button-${i}`}>{i + 1}</p>
                     </BCon>
                   ))}
                   <TwoElemButton

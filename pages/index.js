@@ -31,7 +31,6 @@ export default function Index() {
   const [ scaleBy, setScaleBy ] = useState(1);
   const [rotate, setRotate] = useState(false);
 
-  console.log(device);
   const Device = device.Component;
 
   useEffect(() => {
@@ -59,8 +58,8 @@ export default function Index() {
       }}>
         <Select options={devices} setOption={setDevice} selected={device} />
       </div>
-    <div style={{ transform: `scale(${scaleBy})${rotate ? ' rotate(0.25turn)' : ''}` }}>
-        <Device ref={ref} />
+    <div style={{ transform: `${rotate ? 'rotate(0.25turn) ' : ''}scale(${scaleBy})` }}>
+        <Device innerRef={ref} />
       </div>
     </>
   );

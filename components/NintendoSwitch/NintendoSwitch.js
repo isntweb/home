@@ -1,9 +1,9 @@
 import classes from './nintendoSwitch.module.scss';
 import { cx } from '../../utils';
 
-const NintendoSwitch = () => {
+const NintendoSwitch = ({ innerRef }) => {
   return (
-    <div className={classes.switch}>
+    <div className={classes.switch} ref={innerRef}>
       <div className={classes.body}>
         <div className={classes.volume}/>
         <div className={classes.screen}>
