@@ -1,0 +1,41 @@
+
+.psp {
+    display: grid;
+    grid-rows:
+        [psp-start]
+        10px
+        [psp-screen]
+        30px
+        [psp-buttons]
+        80px
+        [psp-secondary-buttons]
+        30px
+        [psp-bottom]
+        20px
+        [psp-end];
+
+    grid-columns:
+        [psp-left]
+        50px
+        [psp-screen]
+        auto
+        [psp-right]
+        50px
+        [psp-rend];
+}
+
+.leftButtons {
+    grid-row: psp-buttons;
+    grid-column: psp-left;
+}
+
+.rightButtons {
+    grid-row: psp-buttons;
+    grid-column: psp-right;
+}
+
+.screen {
+    grid-row: psp-screen;
+    grid-column: psp-screen;
+    background-color: grey;
+}
