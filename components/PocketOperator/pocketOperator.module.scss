@@ -113,7 +113,7 @@
     grid-row: top-buttons-start;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
 }
 
@@ -122,6 +122,7 @@
     grid-row: button-start;
     display: flex;
     flex-direction: column;
+    justify-content: space-around;
 }
 
 .buttonRow {
