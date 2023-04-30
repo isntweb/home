@@ -1,8 +1,8 @@
 import classes from './dsLite.module.scss';
 
-const DSLite = () => {
+const DSLite = ({ innerRef }) => {
   return (
-    <div className={classes.nintendoDS}>
+    <div className={classes.nintendoDS} ref={innerRef}>
       <div className={classes.topScreen}>
         <div className={classes.speakerHole} id={classes.sh1} />
         <div className={classes.speakerHole} id={classes.sh2} />
