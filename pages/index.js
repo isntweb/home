@@ -29,6 +29,7 @@ export default function Index() {
   const [ref, size] = useElementSize();
 
   const [ scaleBy, setScaleBy ] = useState(1);
+  const [rotate, setRotate] = useState(false);
 
   console.log(device);
   const Device = device.Component;
@@ -41,6 +42,11 @@ export default function Index() {
         window.screen.availHeight / size.height
       );
       setScaleBy(scaleBy);
+      if (size.width > size.height) {
+        setRotate(true);
+      } else {
+        setRotate(false);
+      }
     }
   }, []);
 
@@ -48,12 +54,12 @@ export default function Index() {
     <>
       <div style={{
         position: 'absolute',
-        top: '100px', left: '50%',
+        top: '5%', left: '50%',
         transform: 'translate(-50%,-50%)'
       }}>
         <Select options={devices} setOption={setDevice} selected={device} />
       </div>
-      <div style={{ transform: `scale(${scaleBy})` }}>
+    <div style={{ transform: `scale(${scaleBy})${rotate ? ' rotate(0.25turn)' : ''}` }}>
         <Device ref={ref} />
       </div>
     </>
