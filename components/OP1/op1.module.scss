@@ -86,7 +86,7 @@ p {
 
 /* Container and background */
 
-.op1-container-layer1 {
+.op1ContainerLayer1 {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -101,7 +101,7 @@ p {
   border-radius: 20px;
 }
 
-.op1-container-layer2 {
+.op1ContainerLayer2 {
   display: flex;
   /* flex-direction: column; */
   justify-content: flex-start;
@@ -121,7 +121,7 @@ p {
   border-radius: 20px;
 }
 
-.inner-profile {
+.innerProfile {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -137,7 +137,7 @@ p {
   border-radius: 8px;
 }
 
-.dark-background {
+.darkBackground {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -151,7 +151,7 @@ p {
 
 /* Upper elements */
 
-.upper-part {
+.upperPart {
   display: grid;
   grid-template-columns: repeat(8, 132px) 64px;
   grid-template-rows: repeat(1, 132px);
@@ -160,7 +160,7 @@ p {
   margin-bottom: 4px;
 }
 
-.speaker-block {
+.speakerBlock {
   position: relative;
   display: flex;
   width: 132px;
@@ -181,14 +181,14 @@ p {
   background-size: 109px;
 }
 
-.button-group-1 {
+.buttonGroup1 {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   align-content: space-between;
 }
 
-.long-button-block {
+.longButtonBlock {
   position: relative;
   width: 132px;
   height: 64px;
@@ -200,7 +200,7 @@ p {
   border-radius: 4px;
 }
 
-.vol-knob {
+.volKnob {
   position: relative;
   width: 44px;
   height: 44px;
@@ -214,7 +214,7 @@ p {
   margin-left: 10px;
 }
 
-.knob-dot {
+.knobDot {
   position: relative;
   width: 8px;
   height: 8px;
@@ -229,7 +229,7 @@ p {
 
 /* OP-1 screen */
 
-.op-screen {
+.opScreen {
   position: relative;
   width: 268px;
   height: 132px;
@@ -239,7 +239,7 @@ p {
   grid-column: 3 / 4;
 }
 
-.tape-rolls {
+.tapeRolls {
   position: absolute;
   top: 22.5px;
   left: 45px;
@@ -253,11 +253,11 @@ p {
   grid-gap: 56px;
 }
 
-.roll-1 {
+.roll1 {
   transform: rotate(320deg);
 }
 
-.rotate-center {
+.rotateCenter {
   -webkit-animation: rotate-center 5s linear infinite;
   animation: rotate-center 5s linear infinite;
 }
@@ -297,7 +297,7 @@ p {
   justify-content: space-between;
 }
 
-.knob-block {
+.knobBlock {
   position: relative;
   width: 132px;
   height: 132px;
@@ -309,7 +309,7 @@ p {
   border-radius: 4px;
 }
 
-.outer-knob {
+.outerKnob {
   position: relative;
   background-image: url("https://user-images.githubusercontent.com/11149530/71559596-96038580-2a68-11ea-8e32-8d0d6dc0e95f.png");
   width: 79px;
@@ -320,7 +320,7 @@ p {
   justify-content: center;
 }
 
-.knob-blue {
+.knobBlue {
   position: relative;
   width: 44px;
   height: 44px;
@@ -336,7 +336,7 @@ p {
   border-radius: 100%;
 }
 
-.imprint-blue {
+.imprintBlue {
   position: relative;
   width: 32px;
   height: 9px;
@@ -347,7 +347,7 @@ p {
   transform: rotate(-45deg);
 }
 
-.knob-green {
+.knobGreen {
   position: relative;
   width: 44px;
   height: 44px;
@@ -363,7 +363,7 @@ p {
   border-radius: 100%;
 }
 
-.imprint-green {
+.imprintGreen {
   position: relative;
   width: 32px;
   height: 9px;
@@ -375,7 +375,7 @@ p {
   border-radius: 4px;
 }
 
-.knob-white {
+.knobWhite {
   position: relative;
   width: 44px;
   height: 44px;
@@ -391,7 +391,7 @@ p {
   border-radius: 100%;
 }
 
-.imprint-white {
+.imprintWhite {
   position: relative;
   width: 32px;
   height: 9px;
@@ -532,7 +532,7 @@ p {
   grid-row: 2;
 }
 
-.button-block {
+.buttonBlock {
   width: 64px;
   height: 64px;
   display: flex;
