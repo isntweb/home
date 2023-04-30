@@ -10,7 +10,7 @@
   display: flex;
   justify-content: space-between;
   align-content: space-between;
-  // grid-row: 1;
+  grid-row: 1;
 }
 
 .whiteKeyGroup {
@@ -19,7 +19,7 @@
   grid-row: 2;
 }
 
-.blackKeyBlockShort {
+.blackKeyBlock {
   width: 64px;
   height: 64px;
   display: flex;
@@ -30,15 +30,14 @@
   border-radius: 4px;
 }
 
-.blackKeyBlockLong {
-  width: 98px;
-  height: 64px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.blackKeyBlockShort {
+  @extend .blackKeyBlock;
+  width: 64px;
+}
 
-  background: #dfe0e9;
-  border-radius: 4px;
+.blackKeyBlockLong {
+  @extend .blackKeyBlock;
+  width: 98px;
 }
 
 .blackKey {
@@ -49,33 +48,18 @@
 
   background: #101010;
   border: 2px solid #e5e4eb;
+
   /* rubber-button */
   box-shadow: 6px 6px 16px #9fa6b3, -6px -6px 16px #e8ebf3;
 }
 
 .blackKeyLeft {
-  position: relative;
-  width: 40px;
-  height: 40px;
-  border-radius: 100%;
-
-  background: #101010;
-  border: 2px solid #e5e4eb;
-  /* rubber-button */
-  box-shadow: 6px 6px 16px #9fa6b3, -6px -6px 16px #e8ebf3;
+  @extend .blackKey;
   transform: translateX(-16px);
 }
 
 .blackKeyRight {
-  position: relative;
-  width: 40px;
-  height: 40px;
-  border-radius: 100%;
-
-  background: #101010;
-  border: 2px solid #e5e4eb;
-  /* rubber-button */
-  box-shadow: 6px 6px 16px #9fa6b3, -6px -6px 16px #e8ebf3;
+  @extend .blackKey;
   transform: translateX(16px);
 }
 

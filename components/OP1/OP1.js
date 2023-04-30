@@ -1,5 +1,4 @@
 import classes from './op1.module.scss';
-
 import Keyboard from './Keyboard';
 
 const cx = (...args) => args.join(' ');
@@ -91,11 +90,11 @@ const Screen = () => (
 const RightPanel = () => (
   <div className={classes.rightSidePart}>
     <div className={classes.microphoneVuOp1}>
-      <img
-        width="16"
-        alt="Inbuilt microphone image"
-        src="https://pizzabreakfast.co/project-assets/web-op-1/microphone.svg"
-      />
+      <div className={classes.micSquare}>
+        {[...Array(4)].map(() => (
+          <div className={classes.oval4px} />
+        ))}
+      </div>
       <div className={classes.vuMeter}>
         {[...Array(5)].map((_, index) => (
           <div className={classes.oval4px} />

@@ -13,14 +13,6 @@
 
 /* Typefaces */
 
-// h1 {
-//incorporated into `op1Label`
-//   font-family: "Roboto";
-//   font-weight: normal;
-//   font-size: 28px;
-//   margin: auto;
-// }
-
 .op1Label {
   font-family: "Roboto";
   font-weight: normal;
@@ -355,27 +347,20 @@
   @extend .knob;
   background: #5fbaf2;
   border: 2px solid #8bd0f9;
-  /* rubber-button */
   box-shadow: 6px 6px 16px #9fa6b3, -6px -6px 16px #e8ebf3;
 }
 
 .imprintBlue {
-  position: relative;
-  width: 32px;
-  height: 9px;
-
+  @extend .imprint;
   background: #5bb3ee;
   box-shadow: 1px 1px 2px #89d9ff, inset 1px 1px 1px #0292d4;
-  border-radius: 4px;
   transform: rotate(-45deg);
 }
 
 .knobGreen {
   @extend .knob;
-
   background: #00cd73;
   border: 2px solid #00f1ab;
-  /* rubber-button */
   box-shadow: 6px 6px 16px #9fa6b3, -6px -6px 16px #e8ebf3;
 }
 
@@ -391,14 +376,12 @@
   @extend .knob;
   background: #fcfbfc;
   border: 1px solid rgba(255, 255, 255, 0.2);
-  /* rubber-button */
   box-shadow: 6px 6px 16px #9fa6b3, -6px -6px 16px #e8ebf3;
 }
 
 .imprintWhite {
   @extend .imprint;
   background: #f3f3f3;
-  /* plastic-button-inner */
   box-shadow: 1px 1px 1px rgba(255, 255, 255, 0.5),
     inset 1px 1px 1px rgba(209, 205, 199, 0.5);
   transform: rotate(45deg);
@@ -495,101 +478,6 @@
   align-items: center;
 }
 
-.blackKeyBlockShort {
-  width: 64px;
-  height: 64px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  background: #dfe0e9;
-  border-radius: 4px;
-}
-
-.blackKeyBlockLong {
-  width: 98px;
-  height: 64px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  background: #dfe0e9;
-  border-radius: 4px;
-}
-
-.blackKey {
-  position: relative;
-  width: 40px;
-  height: 40px;
-  border-radius: 100%;
-
-  background: #101010;
-  border: 2px solid #e5e4eb;
-  /* rubber-button */
-  box-shadow: 6px 6px 16px #9fa6b3, -6px -6px 16px #e8ebf3;
-}
-
-.blackKeyLeft {
-  position: relative;
-  width: 40px;
-  height: 40px;
-  border-radius: 100%;
-
-  background: #101010;
-  border: 2px solid #e5e4eb;
-  /* rubber-button */
-  box-shadow: 6px 6px 16px #9fa6b3, -6px -6px 16px #e8ebf3;
-  transform: translateX(-16px);
-}
-
-.blackKeyRight {
-  position: relative;
-  width: 40px;
-  height: 40px;
-  border-radius: 100%;
-
-  background: #101010;
-  border: 2px solid #e5e4eb;
-  /* rubber-button */
-  box-shadow: 6px 6px 16px #9fa6b3, -6px -6px 16px #e8ebf3;
-  transform: translateX(16px);
-}
-
-.whiteKeyBlock {
-  position: relative;
-  width: 64px;
-  height: 132px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: #d1d7e0;
-  border-radius: 4px;
-}
-
-.whiteKey {
-  position: relative;
-  width: 42px;
-  height: 110px;
-  background: #d8dbe3;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  box-sizing: border-box;
-
-  /* rubber-button */
-  box-shadow: 6px 6px 16px #9fa6b3, -6px -6px 16px #e8ebf3;
-  border-radius: 50px;
-}
-
-#icon16px {
-  width: 16px;
-}
-
-#icon24px {
-  width: 24px;
-}
-
-#icon36px {
-  width: 36px;
-}
 
 .rightSidePart {
   display: grid;
@@ -606,7 +494,13 @@
   justify-content: center;
   justify-items: center;
   align-items: center;
-  /* text-align: center; */
+}
+
+.micSquare {
+  display: grid;
+  grid-template-columns: repeat(2, 4px);
+  grid-template-rows: repeat(2, 4px);
+  grid-gap: 6px;
 }
 
 .vuMeter {
