@@ -46,7 +46,11 @@ export default function Index() {
 
   return (
     <>
-      <div style={{  position: 'absolute', top: '100px' }}>
+      <div style={{
+        position: 'absolute',
+        top: '100px', left: '50%',
+        transform: 'translate(-50%,-50%)'
+      }}>
         <Select options={devices} setOption={setDevice} selected={device} />
       </div>
       <div style={{ transform: `scale(${scaleBy})` }}>
