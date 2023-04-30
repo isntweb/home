@@ -8,8 +8,13 @@ import OP1 from '../components/OP1';
 import NintendoSwitch from '../components/NintendoSwitch';
 import Select from '../components/Select';
 import { useElementSize } from '../hooks';
+import DSLite from '../components/DSLite';
 
 const devices = [
+  {
+    name: 'DS Lite'    ,
+    Component: DSLite,
+  },
   {
     name: "Pocket Operator",
     Component: PocketOperator,
