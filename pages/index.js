@@ -7,7 +7,7 @@ import PocketOperator from '../components/PocketOperator';
 import OP1 from '../components/OP1';
 import NintendoSwitch from '../components/NintendoSwitch';
 import Select from '../components/Select';
-import { useElementSize } from '../hooks';
+import { useElementSize, useSampler } from '../hooks';
 import DSLite from '../components/DSLite';
 
 const devices = [
@@ -36,6 +36,8 @@ export default function Index() {
   const [ scaleBy, setScaleBy ] = useState(1);
   const [rotate, setRotate] = useState(false);
 
+  const { play } = useSampler();
+
   const Device = device.Component;
 
   useEffect(() => {
@@ -63,7 +65,19 @@ export default function Index() {
       }}>
         <Select options={devices} setOption={setDevice} selected={device} />
       </div>
-    <div style={{ transform: `${rotate ? 'rotate(0.25turn) ' : ''}scale(${scaleBy})` }}>
+
+      <button
+        style={{
+          position: 'absolute',
+          top: '5%', left: '75%',
+          transform: 'translate(-50%,-50%)',
+          backgroundColor: 'white',
+        }}
+        onClick={() => play('C4')}
+      >
+        Play music
+      </button>
+      <div style={{ transform: `${rotate ? 'rotate(0.25turn) ' : ''}scale(${scaleBy})` }}>
         <Device innerRef={ref} />
       </div>
     </>
