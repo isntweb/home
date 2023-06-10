@@ -22,9 +22,7 @@
       in rec {
         devShell = with pkgs; mkShell {
           name = "home";
-          buildInputs = [
-            nodejs
-          ];
+          buildInputs = [ nodejs ];
         };
       });
 }
